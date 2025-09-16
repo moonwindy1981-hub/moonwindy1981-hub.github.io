@@ -21,17 +21,15 @@
       margin: 5px 0 15px 20px;
     }
     .contact {
-      font-size: 14px;
+      display: flex;
+      align-items: center;
       margin-bottom: 20px;
     }
-    .profile-pic {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .profile-pic img {
+    .contact img {
       width: 150px;
-      border-radius: 50%;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      height: auto;
+      border-radius: 10px;
+      margin-right: 20px;
     }
     .job {
       display: flex;
@@ -78,15 +76,13 @@
 <body>
   <h1>Resume - Nguyen Thi Ngoc Hanh</h1>
 
-  <!-- Ảnh cá nhân -->
-  <div class="profile-pic">
-    <img src="images/MyPhoto.png" alt="My Photo">
-  </div>
-
   <div class="contact">
-    <strong>Address:</strong> My Phuoc Apartment – House 0201, Floor 2, Block 1 - 280/29 Alley, Bui Huu Nghia Street, Binh Thanh District <br>
-    <strong>Mobile:</strong> 0917.021.081 <br>
-    <strong>Email:</strong> <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
+    <img src="images/MyPhoto.png" alt="My Photo">
+    <div>
+      <strong>Address:</strong> My Phuoc Apartment – House 0201, Floor 2, Block 1 - 280/29 Alley, Bui Huu Nghia Street, Binh Thanh District <br>
+      <strong>Mobile:</strong> 0917.021.081 <br>
+      <strong>Email:</strong> <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
+    </div>
   </div>
 
   <div class="section">
@@ -204,4 +200,5 @@
 
 </body>
 </html>
+
 
