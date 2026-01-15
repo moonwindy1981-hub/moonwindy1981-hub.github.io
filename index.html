@@ -4,481 +4,274 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CV – Nguyen Thi Ngoc Hanh</title>
+   <!-- LinkedIn / Open Graph metadata -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Nguyen Thi Ngoc Hanh – Associate / Junior Consultant (Digital Systems & QA)" />
+  <meta property="og:description" content="Associate / Junior Consultant with strong background in Business Analysis, Agile delivery, UAT, and client-facing system implementation in banking and enterprise IT." />
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/" />
+  <meta property="og:image" content="https://YOUR-USERNAME.github.io/images/MyPhoto.png" />
+
   <style>
     :root{
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #475569;
-      --subtle: #64748b;
-      --line: #e2e8f0;
-      --accent: #0b3a6a;
-      --accent-2:#0f4c81;
-      --shadow: 0 10px 25px rgba(2, 6, 23, 0.06);
-      --radius: 16px;
-      --radius-sm: 12px;
+      --bg:#f7f8fa;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --subtle:#64748b;
+      --line:#e2e8f0;
+      --accent:#0b3a6a;
+      --shadow:0 10px 25px rgba(2,6,23,.06);
+      --radius:16px;
+      --radius-sm:12px;
     }
 
-    *{ box-sizing: border-box; }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      line-height: 1.6;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
 
-    a{ color: var(--accent-2); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
 
-    .page{
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 18px 60px;
-    }
-
-    .topbar{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap: 18px;
-      margin-bottom: 18px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap: 12px;
-      color: var(--subtle);
-      font-size: 13px;
-      letter-spacing: 0.02em;
-    }
-    .dot{
-      width:10px;height:10px;border-radius:999px;background: var(--accent);
-      box-shadow: 0 0 0 5px rgba(11,58,106,0.10);
-      flex:0 0 auto;
-    }
+    .page{max-width:1000px;margin:40px auto;padding:0 18px 60px}
 
     .header{
       display:grid;
-      grid-template-columns: 140px 1fr;
-      gap: 18px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-      padding: 22px;
-      margin-bottom: 22px;
+      grid-template-columns:140px 1fr;
+      gap:20px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
+      margin-bottom:22px;
     }
 
     .photo{
-      width: 140px;
-      height: 160px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--line);
-      object-fit: cover;
-      background: #eef2f7;
+      width:140px;height:160px;
+      object-fit:cover;
+      border-radius:var(--radius-sm);
+      border:1px solid var(--line);
+      background:#eef2f7;
     }
 
-    .name{
-      margin: 0;
-      font-size: 32px;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-    }
-
-    .headline{
-      margin: 6px 0 0;
-      font-size: 16px;
-      color: var(--muted);
-    }
+    h1{margin:0;font-size:32px}
+    .headline{margin:6px 0 0;color:var(--muted)}
 
     .meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px 14px;
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 14px;
+      display:flex;flex-wrap:wrap;
+      gap:10px 14px;margin-top:14px;
+      font-size:14px;color:var(--muted);
     }
 
     .pill{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
-      padding: 6px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #fbfdff;
-    }
-    .pill svg{ width: 16px; height: 16px; color: var(--subtle); }
-
-    .layout{
-      display:grid;
-      grid-template-columns: 1fr 320px;
-      gap: 18px;
-    }
-
-    @media (max-width: 900px){
-      .header{ grid-template-columns: 110px 1fr; }
-      .photo{ width:110px; height:130px; }
-      .layout{ grid-template-columns: 1fr; }
-    }
-
-    .card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-      padding: 18px 18px 14px;
-    }
-
-    .section-title{
-      margin: 0 0 10px;
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--subtle);
-    }
-
-    .summary{
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .job{
-      padding: 14px 0;
-      border-top: 1px solid var(--line);
-    }
-    .job:first-of-type{
-      border-top: none;
-      padding-top: 4px;
-    }
-    .job h3{
-      margin: 0;
-      font-size: 16px;
-      letter-spacing: -0.01em;
-    }
-    .job .company{
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .job .period{
-      margin-top: 4px;
-      color: var(--subtle);
-      font-size: 13px;
-      font-style: italic;
-    }
-
-    ul{
-      margin: 10px 0 0 18px;
-      padding: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    li{ margin: 6px 0; }
-
-    .two-col{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .kv{
-      display:grid;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .kv strong{ color: var(--text); font-weight: 600; }
-
-    .list{
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .list li{
-      padding: 8px 0;
-      border-top: 1px solid var(--line);
-    }
-    .list li:first-child{ border-top: none; padding-top: 0; }
-
-    .download{
-      margin-top: 16px;
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap: 10px;
-      padding: 11px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fbfdff;
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 14px;
-      transition: transform 0.06s ease, background 0.2s ease, border-color 0.2s ease;
-    }
-    .btn:hover{
-      background: #ffffff;
-      border-color: #cbd5e1;
-      transform: translateY(-1px);
-      text-decoration: none;
-    }
-    .btn.primary{
-      background: var(--accent);
-      color: #fff;
-      border-color: rgba(255,255,255,0.2);
-    }
-    .btn.primary:hover{
-      background: var(--accent-2);
-      border-color: rgba(255,255,255,0.25);
-    }
-    .btn svg{ width: 16px; height: 16px; }
-
-    .note{
-      margin-top: 10px;
-      color: var(--subtle);
-      font-size: 12.5px;
+      padding:6px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fbfdff;
     }
 
     .tag-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 8px;
-      margin-top: 10px;
+      display:flex;flex-wrap:wrap;
+      gap:8px;margin-top:14px;
     }
+
     .tag{
-      font-size: 12.5px;
-      color: var(--muted);
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #fbfdff;
+      font-size:12.5px;
+      padding:6px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fbfdff;
+      color:var(--muted);
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:18px;
+    }
+
+    @media(max-width:900px){
+      .header{grid-template-columns:110px 1fr}
+      .photo{width:110px;height:130px}
+      .layout{grid-template-columns:1fr}
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .section-title{
+      margin:0 0 10px;
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--subtle);
+    }
+
+    .job{
+      border-top:1px solid var(--line);
+      padding-top:14px;
+      margin-top:14px;
+    }
+    .job:first-child{border-top:none;margin-top:0;padding-top:0}
+    .job h3{margin:0;font-size:16px}
+    .company{color:var(--muted);font-size:14px}
+    .period{font-size:13px;color:var(--subtle);font-style:italic}
+
+    ul{margin:10px 0 0 18px;color:var(--muted);font-size:14px}
+    li{margin:6px 0}
+
+    .btn{
+      display:inline-block;
+      padding:12px 20px;
+      background:var(--accent);
+      color:#fff;
+      border-radius:12px;
+      font-weight:600;
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
+<div class="page">
 
-    <div class="topbar">
-      <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
-        <span>CV • Nordic minimal layout</span>
+  <!-- HEADER -->
+  <section class="header">
+    <img src="images/MyPhoto.png" alt="Profile photo" class="photo">
+
+    <div>
+      <h1>Nguyen Thi Ngoc Hanh</h1>
+      <p class="headline">Associate / Junior Consultant – Digital Systems & Quality (QA / UAT Focus)</p>
+
+      <div class="meta">
+        <span class="pill">Espoo, Finland</span>
+        <a class="pill" href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
+        <span class="pill">English (Fluent) • Vietnamese (Native) • Finnish (A2)</span>
       </div>
-      <!-- Optional: put a discreet link here if you want -->
-    </div>
 
-    <section class="header">
-      <img class="photo" src="images/MyPhoto.png" alt="Nguyen Thi Ngoc Hanh photo" />
-
-      <div>
-        <h1 class="name">Nguyen Thi Ngoc Hanh</h1>
-        <p class="headline">Associate / Junior Consultant – Digital Systems &amp; Quality (QA / UAT Focus)</p>
-
-        <div class="meta" aria-label="Contact information">
-          <span class="pill">
-            <!-- location icon -->
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 21s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M12 10.5a2.2 2.2 0 110-4.4 2.2 2.2 0 010 4.4z" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-            Espoo, Finland
-          </span>
-
-          <a class="pill" href="mailto:moonwindy1981@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 6h16v12H4V6z" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-            moonwindy1981@gmail.com
-          </a>
-
-          <span class="pill">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M2 12h20" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M12 2c3 3 4.5 7 4.5 10S15 19 12 22C9 19 7.5 15 7.5 12S9 5 12 2z" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-            English (Fluent) • Vietnamese (Native) • Finnish (A2)
-          </span>
-
-          <!-- Optional LinkedIn pill -->
-          <!--
-          <a class="pill" href="https://www.linkedin.com/in/your-link" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6.5 9.5H4v11h2.5v-11z" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M5.25 7.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M20 20.5v-6.2c0-2.6-1.4-4-3.4-4-1.6 0-2.4.9-2.8 1.5v-1.3H11v10h2.8v-5.5c0-1.5.3-2.9 2.1-2.9s1.9 1.7 1.9 3v5.4H20z" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-            LinkedIn
-          </a>
-          -->
-        </div>
-
-        <div class="tag-row" aria-label="Key tags">
-          <span class="tag">Client-facing delivery</span>
-          <span class="tag">UAT &amp; validation</span>
-          <span class="tag">Regulated banking systems</span>
-          <span class="tag">Implementation &amp; enablement</span>
-        </div>
-
-        <div class="download">
-          <a class="btn primary" href="CV-HanhNguyen.pdf" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 3v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M8 10l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M4 17v3h16v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            Download CV (PDF)
-          </a>
-
-          <a class="btn" href="#experience">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M7 7h10M7 12h10M7 17h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            Jump to Experience
-          </a>
-        </div>
-
-        <div class="note">Tip: Keep this page as your “online CV” and attach the PDF when applying.</div>
+      <!-- UPDATED TAGS -->
+      <div class="tag-row">
+        <span class="tag">Agile delivery & Sprint collaboration</span>
+        <span class="tag">Requirements elicitation & analysis</span>
+        <span class="tag">UAT & validation</span>
+        <span class="tag">Squad-based delivery (PO, Dev, Architect, QA)</span>
+        <span class="tag">Internal & external client collaboration</span>
       </div>
-    </section>
 
-    <div class="layout">
-      <!-- LEFT COLUMN -->
-      <main class="two-col">
-        <section class="card">
-          <h2 class="section-title">Professional Summary</h2>
-          <p class="summary">
-            Consultant-profile professional with extensive experience in business analysis, system implementation,
-            and quality validation across banking, financial services, and enterprise IT environments. Hands-on background
-            in client-facing implementation and support roles, including testing, UAT, system rollout, training, and go-live
-            support. Currently targeting an Associate / Junior Consultant role focused on digital quality, testing, and client enablement.
-          </p>
-        </section>
-
-        <section id="experience" class="card">
-          <h2 class="section-title">Consulting &amp; Implementation Experience (Client-facing)</h2>
-
-          <div class="job">
-            <h3>Implementation &amp; Support Consultant – Capital Markets Systems</h3>
-            <div class="company">CMS – Capital Market Solutions</div>
-            <ul>
-              <li>Implemented front-office and back-office trading systems for financial institutions.</li>
-              <li>Supported system configuration, customization, validation, and release readiness.</li>
-              <li>Designed and executed test scenarios; supported UAT and defect clarification.</li>
-              <li>Delivered system demos, end-user training, and go-live support.</li>
-              <li>Acted as liaison between clients, business analysts, and development teams.</li>
-            </ul>
-          </div>
-
-          <div class="job">
-            <h3>Business Analyst / IT Coordinator – Client Solutions</h3>
-            <div class="company">N2N-AFE (Hong Kong)</div>
-            <ul>
-              <li>Coordinated between clients, in-house teams, and offshore development teams.</li>
-              <li>Supported system testing, UAT preparation, defect tracking, and release validation.</li>
-              <li>Served as client-facing contact point during delivery and post-release support.</li>
-              <li>Ensured alignment with client requirements through iterative validation and feedback.</li>
-            </ul>
-          </div>
-
-          <div class="job">
-            <h3>Implementation Consultant – HR, Payroll &amp; Time Attendance Systems</h3>
-            <div class="company">Cadena Vietnam</div>
-            <ul>
-              <li>Delivered end-to-end implementation of HR and payroll solutions for enterprise clients.</li>
-              <li>Conducted client workshops to analyse business processes and requirements.</li>
-              <li>Executed testing, supported UAT, and trained end users during go-live phases.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2 class="section-title">Business Analysis &amp; Delivery Experience (Banking &amp; Financial Services)</h2>
-
-          <div class="job">
-            <h3>Business Analyst / Product Business Analyst / Process Analyst</h3>
-            <div class="company">Large banking and financial institutions (ACB, FE Credit, ANZ, GFT, JACCS)</div>
-            <div class="period">Approx. 2009 – 2023</div>
-            <ul>
-              <li>Analysed business processes and system behaviour to define clear, testable requirements.</li>
-              <li>Created business and system specifications, user stories, and acceptance criteria.</li>
-              <li>Designed UAT test scenarios and supported execution and defect resolution.</li>
-              <li>Worked closely with development, QA, and vendor teams in regulated environments.</li>
-              <li>
-                <strong>Vendor Management (ACB):</strong> built vendor management processes, coordinated risk assessments,
-                managed delivery milestones, and supported contract and payment governance.
-              </li>
-            </ul>
-          </div>
-        </section>
-      </main>
-
-      <!-- RIGHT COLUMN -->
-      <aside class="two-col">
-        <section class="card">
-          <h2 class="section-title">Core Skills</h2>
-          <ul>
-            <li>Client-facing consulting &amp; stakeholder communication</li>
-            <li>System implementation, validation &amp; UAT</li>
-            <li>Business &amp; system analysis in regulated environments</li>
-            <li>Test scenario design &amp; QA support</li>
-            <li>Agile / Scrum collaboration</li>
-            <li>Vendor &amp; delivery coordination</li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2 class="section-title">Tools &amp; Technologies</h2>
-          <ul>
-            <li>Requirements &amp; system documentation</li>
-            <li>UAT planning and execution</li>
-            <li>MS Office</li>
-            <li>SQL (basic)</li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2 class="section-title">Education</h2>
-          <ul>
-            <li><strong>MBA – ICT Specialization</strong> (ongoing – part time study)<br/>Haaga-Helia UAS, Finland</li>
-            <li><strong>Master of Marketing &amp; Sales Service</strong><br/>CFVG (ESCP Business School &amp; Sorbonne)</li>
-            <li><strong>Bachelor of IT &amp; Multimedia</strong><br/>RMIT University Vietnam</li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2 class="section-title">Professional Development</h2>
-          <ul>
-            <li>Six Sigma (in-house training)</li>
-            <li>Product Management – Nordic Coder School</li>
-            <li>Foundational learning in modern testing tools and test automation concepts</li>
-          </ul>
-        </section>
-
-        <section class="card">
-          <h2 class="section-title">Target</h2>
-          <div class="kv">
-            <div><strong>Role:</strong> Associate / Junior Consultant</div>
-            <div><strong>Focus:</strong> Testing, QA, Digital Quality Solutions</div>
-            <div><strong>Preferred:</strong> Client enablement, UAT, validation in enterprise systems</div>
-          </div>
-        </section>
-      </aside>
+      <p style="margin-top:16px">
+        <a class="btn" href="CV-HanhNguyen.pdf" target="_blank">Download CV (PDF)</a>
+      </p>
     </div>
+  </section>
+
+  <div class="layout">
+
+    <!-- LEFT COLUMN -->
+    <main>
+
+      <section class="card">
+        <h2 class="section-title">Professional Summary</h2>
+        <p>
+          Consultant-profile professional with extensive experience working in Agile delivery
+          environments across banking, financial services, and enterprise IT.
+          Strong background as a Business Analyst supporting end-to-end delivery, including
+          requirements elicitation and analysis, backlog refinement, sprint planning,
+          and solution validation.
+          Hands-on experience collaborating with cross-functional squad teams
+          (Product Owners, developers, architects, and QA),
+          while working closely with both internal stakeholders and external clients.
+          Currently targeting an Associate / Junior Consultant role focused on digital quality,
+          testing, and client enablement.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Consulting & Implementation Experience (Client-facing)</h2>
+
+        <div class="job">
+          <h3>Implementation & Support Consultant – Capital Markets Systems</h3>
+          <div class="company">CMS – Capital Market Solutions</div>
+          <ul>
+            <li>Implemented front-office and back-office trading systems.</li>
+            <li>System configuration, validation, UAT and release readiness.</li>
+            <li>Client demos, user training and go-live support.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>Business Analyst / IT Coordinator – Client Solutions</h3>
+          <div class="company">N2N-AFE (Hong Kong)</div>
+          <ul>
+            <li>Client-facing coordination with offshore development teams.</li>
+            <li>Testing, UAT preparation, defect tracking and validation.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <h3>Implementation Consultant – HR & Payroll Systems</h3>
+          <div class="company">Cadena Vietnam</div>
+          <ul>
+            <li>End-to-end system implementation and user enablement.</li>
+            <li>Workshops, testing, UAT and go-live support.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Business Analysis & Delivery Experience</h2>
+
+        <div class="job">
+          <h3>Business Analyst / Product Business Analyst / Process Analyst</h3>
+          <div class="company">ACB, FE Credit, ANZ, GFT, JACCS</div>
+          <div class="period">Approx. 2009 – 2023</div>
+          <ul>
+            <li>Requirements elicitation, analysis and documentation.</li>
+            <li>Agile sprint support, backlog refinement and validation.</li>
+            <li>Collaboration with PO, Dev, Architect and QA squads.</li>
+            <li><strong>Vendor Management (ACB):</strong> risk assessment, milestones, governance.</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- RIGHT COLUMN -->
+    <aside>
+
+      <!-- BA CAPABILITIES BOX -->
+      <section class="card">
+        <h2 class="section-title">Business Analysis Capabilities</h2>
+        <ul>
+          <li>Requirements elicitation (interviews, workshops)</li>
+          <li>Business & system analysis in Agile environments</li>
+          <li>Backlog refinement & sprint support</li>
+          <li>Stakeholder management (internal & external clients)</li>
+          <li>Impact analysis, UAT & solution validation</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Education</h2>
+        <ul>
+          <li><strong>MBA – ICT Specialization</strong> (ongoing – part time study)<br>Haaga-Helia UAS, Finland</li>
+          <li>Master of Marketing & Sales Service – CFVG (ESCP & Sorbonne)</li>
+          <li>Bachelor of IT & Multimedia – RMIT University Vietnam (Australian university)</li>
+        </ul>
+      </section>
+
+    </aside>
 
   </div>
+</div>
 </body>
 </html>
