@@ -6,6 +6,7 @@
   <title>CV – Nguyen Thi Ngoc Hanh</title>
 
   <style>
+    /* ===== Design tokens ===== */
     :root {
       --bg: #f7f8fa;
       --card: #ffffff;
@@ -134,9 +135,10 @@
       color: var(--subtle);
     }
 
-    /* ===== Summary ===== */
+    /* ===== Professional Summary ===== */
     .summary {
       text-align: justify;
+      text-justify: inter-word;
       line-height: 1.7;
       color: var(--muted);
       font-size: 15px;
@@ -157,10 +159,7 @@
 
     .job h3 { margin: 0; font-size: 16px; }
 
-    .company {
-      font-size: 14px;
-      color: var(--muted);
-    }
+    .company { font-size: 14px; color: var(--muted); }
 
     .period {
       font-size: 13px;
@@ -169,132 +168,168 @@
       margin-top: 2px;
     }
 
+    /* ===== Bullet tuning ===== */
     .cv-bullets {
+      margin-left: 0;
       padding-left: 18px;
-      margin: 8px 0 0;
+      margin-top: 10px;
       color: var(--muted);
       font-size: 14px;
     }
 
     .cv-bullets li {
+      margin-left: 0;
       padding-left: 6px;
       margin-bottom: 6px;
+      line-height: 1.6;
     }
 
-    .cv-bullets strong {
-      color: var(--text);
-      font-weight: 600;
-    }
+    .cv-bullets strong { color: var(--text); font-weight: 600; }
 
     .role-label {
-      margin: 10px 0 4px;
-      font-size: 14px;
-      color: var(--text);
+      margin: 6px 0 4px;
+      font-size: 14px; /* giống bullet text */
+      color: var(--text); /* giống Process Analyst */
     }
   </style>
 </head>
 
 <body>
-<div class="page">
+  <div class="page">
 
-  <!-- HEADER -->
-  <section class="header">
-    <img src="images/MyPhoto.png" alt="Profile photo" class="photo">
+    <!-- HEADER -->
+    <section class="header">
+      <img src="images/MyPhoto.png" alt="Profile photo" class="photo">
 
-    <div>
-      <h1>Nguyen Thi Ngoc Hanh</h1>
-      <div class="headline">Business Analyst transitioning into Consulting – Digital Systems & Quality (UAT / QA)</div>
+      <div>
+        <h1>Nguyen Thi Ngoc Hanh</h1>
+        <div class="headline">Business Analyst transitioning into Consulting – Digital Systems & Quality (UAT / QA)</div>
 
-      <div class="meta">
-        <span class="pill pill-lang">English (Fluent) • Vietnamese (Native) • Finnish (A2)</span>
-        <span class="pill">Espoo, Finland</span>
-        <a class="pill" href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
-        <a class="pill" href="tel:+358415764445">+358 41 576 4445</a>
-        <a class="pill" href="https://www.linkedin.com/in/hanh-nguyen-b80b38a1" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-
-      <div class="tag-row">
-        <span class="tag">Agile delivery & Sprint collaboration</span>
-        <span class="tag">Requirements elicitation & analysis</span>
-        <span class="tag">UAT & validation</span>
-        <span class="tag">Squad-based delivery (PO, Dev, Architect, QA)</span>
-        <span class="tag">Internal & external client collaboration</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="layout">
-
-    <!-- LEFT -->
-    <main>
-
-      <section class="card">
-        <h2 class="section-title">Professional Summary</h2>
-        <p class="summary">
-          Consultant-profile professional with extensive experience working in Agile delivery environments
-          across banking, financial services, and enterprise IT. Strong background as a Business Analyst
-          supporting end-to-end delivery, including requirements elicitation and analysis, backlog refinement,
-          sprint planning, and solution validation. Hands-on experience collaborating with cross-functional
-          squad teams while working closely with both internal stakeholders and external clients.
-        </p>
-      </section>
-
-      <section class="card">
-        <h2 class="section-title">Business Analysis & Delivery Experience</h2>
-
-        <div class="job">
-          <h3>IT Business Analyst / Product Business Analyst / Process Analyst</h3>
-          <div class="company">ACB Bank, FE Credit, Home Credit, ANZ Bank, GFT, JACCS Finance</div>
-          <div class="period">Approx. 2010 – 2023</div>
-
-          <p class="role-label"><strong>IT Business Analyst:</strong></p>
-          <ul class="cv-bullets">
-            <li>Elicited, analyzed, and documented business and system requirements.</li>
-            <li>Worked closely with Product Owners to refine backlogs and support sprint planning.</li>
-            <li>Collaborated with development, architecture, and QA squads in Agile environments.</li>
-            <li>Supported solution validation, UAT execution, and defect resolution.</li>
-          </ul>
-
-          <p class="role-label"><strong>Process Analyst (Home Credit):</strong></p>
-          <ul class="cv-bullets">
-            <li>Performed process analysis and BPMN-based modelling to clarify end-to-end business flows.</li>
-            <li>Aligned process design with system behaviour to support implementation and validation.</li>
-          </ul>
-
-          <p class="role-label"><strong>Vendor Management (ACB Bank):</strong></p>
-          <ul class="cv-bullets">
-            <li>Built and maintained vendor management processes and delivery governance.</li>
-            <li>Coordinated vendor risk assessments, milestones, and contract/payment support.</li>
-          </ul>
+        <div class="meta">
+          <span class="pill pill-lang">English (Fluent) • Vietnamese (Native) • Finnish (A2)</span>
+          <span class="pill">Espoo, Finland</span>
+          <a class="pill" href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
+          <a class="pill" href="tel:+358415764445">+358 41 576 4445</a>
+          <a class="pill" href="https://www.linkedin.com/in/hanh-nguyen-b80b38a1" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-      </section>
 
-    </main>
+        <div class="tag-row" aria-label="Key expertise">
+          <span class="tag">Agile delivery & Sprint collaboration</span>
+          <span class="tag">Requirements elicitation & analysis</span>
+          <span class="tag">UAT & validation</span>
+          <span class="tag">Squad-based delivery (PO, Dev, Architect, QA)</span>
+          <span class="tag">Internal & external client collaboration</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- RIGHT -->
-    <aside>
+    <div class="layout">
 
-      <section class="card">
-        <h2 class="section-title">Business Analysis Capabilities</h2>
-        <ul class="cv-bullets">
-          <li>Requirements elicitation through interviews and workshops.</li>
-          <li>Business & system analysis in Agile environments.</li>
-          <li>Backlog refinement and sprint support.</li>
-          <li>Stakeholder management and UAT coordination.</li>
-        </ul>
-      </section>
+      <!-- LEFT COLUMN -->
+      <main>
+        <section class="card">
+          <h2 class="section-title">Professional Summary</h2>
+          <p class="summary">
+            Consultant-profile professional with extensive experience working in Agile delivery environments across banking, financial services, and enterprise IT. Strong background as a Business Analyst supporting end-to-end delivery, including requirements elicitation and analysis, backlog refinement, sprint planning, and solution validation. Hands-on experience collaborating with cross-functional squad teams (Product Owners, developers, architects, and QA), while working closely with both internal stakeholders and external clients. Currently targeting an Associate / Junior Consultant role focused on digital quality, testing, and client enablement.
+          </p>
+        </section>
 
-      <section class="card">
-        <h2 class="section-title">Education</h2>
-        <ul class="cv-bullets">
-          <li><strong>MBA – ICT Specialization</strong> (ongoing – part time)<br>Haaga-Helia UAS, Finland</li>
-          <li>Master of Marketing & Sales Service – CFVG (ESCP & Sorbonne)</li>
-          <li>Bachelor of IT & Multimedia – RMIT University Vietnam</li>
-        </ul>
-      </section>
+        <section class="card">
+          <h2 class="section-title">Consulting & Implementation Experience (Client-facing)</h2>
 
-    </aside>
+          <div class="job">
+            <h3>Implementation & Support Consultant – Securities Trading Systems</h3>
+            <div class="company">CMS – Capital Market Solutions</div>
+            <div class="period">2008 – 2010</div>
+            <ul class="cv-bullets">
+              <li>Implemented and supported front-office and back-office trading systems for capital markets clients.</li>
+              <li>Configured system components and validated end-to-end transaction flows prior to release.</li>
+              <li>Designed and executed UAT scenarios to verify functional and business requirements.</li>
+              <li>Supported release readiness, defect clarification, and go-live activities.</li>
+              <li>Delivered client demos, conducted end-user training, and provided post-production support.</li>
+              <li>Acted as a liaison between business users, developers, and QA teams during delivery.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Business Analyst / IT Coordinator – Securities Trading Systems</h3>
+            <div class="company">N2N-AFE (Hong Kong)</div>
+            <div class="period">2018</div>
+            <ul class="cv-bullets">
+              <li>Acted as client-facing coordinator between customers and offshore development teams.</li>
+              <li>Clarified business requirements and supported solution customization.</li>
+              <li>Prepared and supported system testing and UAT execution.</li>
+              <li>Tracked defects, validated fixes, and supported release confirmation.</li>
+              <li>Provided post-release support and ongoing client communication.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Implementation Consultant – HR & Payroll Systems</h3>
+            <div class="company">Cadena Vietnam</div>
+            <div class="period">2015</div>
+            <ul class="cv-bullets">
+              <li>Delivered end-to-end implementation of HR, payroll, and time attendance systems.</li>
+              <li>Conducted client workshops to elicit requirements and map business processes.</li>
+              <li>Configured solutions and supported functional testing and UAT.</li>
+              <li>Trained end users and supported go-live and stabilization phases.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Business Analysis & Delivery Experience</h2>
+
+          <div class="job">
+            <h3>IT Business Analyst / Product Business Analyst / Process Analyst</h3>
+            <div class="company">ACB Bank, FE Credit, Home Credit, ANZ Bank, GFT, JACCS Finance</div>
+            <div class="period">Approx. 2010 – 2023</div>
+
+            <p class="role-label"><strong>IT Business Analyst:</strong></p>
+            <ul class="cv-bullets">
+              <li>Elicited, analyzed, and documented business and system requirements.</li>
+              <li>Worked closely with Product Owners to refine backlogs and support sprint planning.</li>
+              <li>Collaborated with development, architecture, and QA squads in Agile environments.</li>
+              <li>Supported solution validation, UAT execution, and defect resolution.</li>
+            </ul>
+
+            <p class="role-label"><strong>Process Analyst (Home Credit):</strong></p>
+            <ul class="cv-bullets">
+              <li>Focused on process analysis and BPMN-based modelling to clarify end-to-end flows and align business and delivery teams.</li>
+            </ul>
+
+            <p class="role-label"><strong>Vendor Management (ACB Bank):</strong></p>
+            <ul class="cv-bullets">
+              <li>Built vendor management processes, coordinated risk assessments, managed delivery milestones, and supported contract and payment governance.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <!-- RIGHT COLUMN -->
+      <aside>
+        <section class="card">
+          <h2 class="section-title">Business Analysis Capabilities</h2>
+          <ul class="cv-bullets">
+            <li>Requirements elicitation through interviews, workshops, and stakeholder discussions.</li>
+            <li>Business and system analysis in Agile and hybrid delivery environments.</li>
+            <li>Backlog refinement, sprint preparation, and ongoing delivery support.</li>
+            <li>Stakeholder management with both internal teams and external clients.</li>
+            <li>Impact analysis, UAT coordination, and solution validation.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Education</h2>
+          <ul class="cv-bullets">
+            <li><strong>MBA – ICT Specialization</strong> (ongoing – part time study)<br>Haaga-Helia UAS, Finland</li>
+            <li>Master of Marketing & Sales Service – CFVG (ESCP & Sorbonne)</li>
+            <li>Bachelor of IT & Multimedia – Royal Melbourne Institute of Technology (Vietnam campus)</li>
+          </ul>
+        </section>
+      </aside>
+
+    </div>
   </div>
-</div>
 </body>
 </html>
