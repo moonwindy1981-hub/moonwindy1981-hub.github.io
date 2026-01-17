@@ -64,24 +64,27 @@
         display:block;
     }
 
-      .avatar-frame{
+    .avatar-frame{
       width:150px;
-      height:190px;              /* 🔥 tăng cao để thấy mặt + vai */
+      height:190px;
       border-radius:14px;
       border:1px solid var(--line);
       background:#fff;
       overflow:hidden;
       display:flex;
-      align-items:flex-start;    /* ưu tiên giữ tóc */
+      align-items:center;      /* 🔥 canh giữa để thấy mặt */
       justify-content:center;
     }
     
     .avatar-img{
-      width:165%;                /* 🔥 giảm nhẹ để đỡ cắt */
-      height:auto;
-      margin-top:-2px;           /* 🔥 kéo lên nhẹ, không mất tóc */
+      width:150px;             /* 🔥 bỏ phóng 170% để không cắt mặt */
+      height:190px;
+      object-fit:cover;        /* 🔥 fill frame */
+      object-position:50% 35%; /* 🔥 ưu tiên giữ tóc + mặt */
       display:block;
+      margin:0;
     }
+
 
     h1{
       margin:0 0 6px;
