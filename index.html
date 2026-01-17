@@ -25,7 +25,27 @@
       line-height:1.5;
     }
 
-    .page{max-width:1060px;margin:26px auto;padding:0 14px}
+    .page{max-width:1060px;margin:18px auto 26px;padding:0 14px}
+
+    /* ✅ PDF toolbar */
+    .toolbar{
+      max-width:1060px;
+      margin:18px auto 10px;
+      padding:0 14px;
+      display:flex;
+      justify-content:flex-end;
+    }
+    .btn{
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:10px;
+      padding:10px 12px;
+      font-size:13px;
+      cursor:pointer;
+      color:var(--accent);
+    }
+    .btn:hover{background:#f3f4f6}
+
     .card{
       background:var(--card);
       border:1px solid var(--line);
@@ -260,286 +280,295 @@
       .avatar-img{width:120px;height:160px}
     }
 
+    /* ✅ PRINT to PDF settings */
     @media print{
+      @page{size:A4;margin:12mm;}
       body{background:#fff}
-      .page{margin:0;padding:0}
+      .toolbar{display:none}
+      .page{max-width:none;margin:0;padding:0}
       .card{border:none;box-shadow:none;border-radius:0}
       .right{background:#fff}
       .item,.item--shade,.item--sub{box-shadow:none}
+      a{color:inherit;text-decoration:none}
     }
   </style>
 </head>
 
 <body>
-<div class="page">
-  <div class="card">
 
-    <!-- HEADER -->
-    <header>
-      <div class="header-grid">
-        <div class="avatar-frame">
-          <img src="images/MyPhoto_v3.png" alt="Hanh Nguyen" class="avatar-img"/>
-        </div>
-
-        <div>
-          <h1>Hanh Nguyen</h1>
-          <p class="headline">
-            Business Analyst / IT Consultant – Banking &amp; Financial Services<br/>
-            <strong>10 years experience</strong> · Client-facing · Strong in communication &amp; facilitation
-          </p>
-
-          <div class="groups">
-            <!-- CONTACT -->
-            <div class="group">
-              <h3>Contact &amp; Availability</h3>
-              <div class="chips">
-                <span class="chip">📍 Espoo, Finland</span>
-
-                <span class="chip email-chip">
-                  <span class="icon">✉️</span>
-                  <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
-                </span>
-
-                <span class="chip">📞 <a href="tel:+358415764445">+358 41 576 4445</a></span>
-
-                <span class="chip linkedin-chip">
-                  <span class="icon">in</span>
-                  <a href="https://www.linkedin.com/in/hanh-nguyen-b80b38a1" target="_blank" rel="noopener">LinkedIn</a>
-                </span>
-
-                <span class="chip">English (Fluent)</span>
-                <span class="chip">Vietnamese (Native)</span>
-                <span class="chip">Finnish (A2)</span>
-              </div>
-
-              <div class="spacer"></div>
-
-              <div class="mini">
-                <span>Retail Banking</span>
-                <span>Consumer Finance</span>
-                <span>Digital Banking</span>
-                <span>Capital Markets</span>
-                <span>Risk &amp; Compliance</span>
-                <span>Enterprise Systems</span>
-              </div>
-            </div>
-
-            <!-- SKILLS -->
-            <div class="group">
-              <h3>Key Skills</h3>
-              <div class="chips">
-                <span class="chip">Client &amp; stakeholder communication</span>
-                <span class="chip">Requirements elicitation &amp; clarification</span>
-                <span class="chip">Workshop facilitation &amp; expectation management</span>
-                <span class="chip">Agile delivery &amp; squad collaboration</span>
-                <span class="chip">UAT coordination &amp; business sign-off</span>
-                <span class="chip">Presentation &amp; decision support</span>
-                <span class="chip">Vendor coordination &amp; negotiation</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </header>
-
-    <!-- BODY -->
-    <main>
-      <!-- LEFT -->
-      <div class="left">
-
-        <section class="section">
-          <h2>Professional Summary</h2>
-          <p>
-            Business Analyst and IT Consultant with 10 years of experience in
-            banking and financial services, including retail banking, digital banking,
-            consumer finance, and capital markets.
-          </p>
-          <p>
-            Experienced in working directly with business stakeholders, internal clients, vendors,
-            and IT leadership to clarify needs, manage expectations, and support informed decisions.
-            Strong in communication, facilitation, and presentation across requirements, UAT,
-            and go-live phases in regulated environments.
-          </p>
-        </section>
-
-        <!-- ✅ PROCESS / PRODUCT ANALYSIS (ADDED CORRECTLY) -->
-
-        <section class="section">
-          <h2>BA Experience – Banking &amp; Financial Services</h2>
-
-          <div class="item item--shade">
-            <div class="role">
-              <strong>Cross-functional Banking Programs</strong>
-              <span class="when">2016 – 2023</span>
-            </div>
-            <div class="sub">(Asia Commercial Bank, GFT Technologies, FE Credit, JACCS Finance, N2N-AFE)</div>
-
-            <ul>
-              <li>Business Analyst roles across multiple banking organisations and delivery models.</li>
-              <li>Worked in settings requiring regular interaction with business, IT, and vendor teams.</li>
-              <li>Experience spanning core banking, digital banking, compliance, and capital markets systems.</li>
-            </ul>
-
-            <div class="subhead">Selected Banking &amp; Finance Roles</div>
-
-            <div class="subitems">
-              <div class="item item--sub">
-                <div class="role">
-                  <strong>Asia Commercial Bank (ACB) — Business Analyst</strong>
-                </div>
-                <div class="domain">Asset Valuation &amp; Collateral Appraisal Systems</div>
-                <ul>
-                  <li>Worked directly with business users to clarify requirements for asset valuation and collateral appraisal.</li>
-                  <li>Clarified business rules and system behaviour through structured discussions and scenario-based analysis.</li>
-                  <li>Translated business requirements into clear functional specifications aligned with IT teams and vendors.</li>
-                  <li>Explained impacts, acceptance criteria, and change implications to stakeholders during UAT.</li>
-                  <li>Managed UAT coordination and business sign-off in a regulated banking environment.</li>
-                </ul>
-              </div>
-
-              <div class="item item--sub">
-                <div class="role">
-                  <strong>Asia Commercial Bank (ACB) — IT Vendor Management</strong>
-                </div>
-                <div class="domain">SIEM / Splunk, eKYC, Security &amp; Compliance</div>
-                <ul>
-                  <li>Worked with Heads of IT to build and refine vendor evaluation and selection processes.</li>
-                  <li>Participated in IT sourcing project initiatives, coordinating technical reviews and POC activities.</li>
-                  <li>Known for keeping business, security, and technical teams aligned on feasibility, risk, and compliance.</li>
-                  <li>Supported preparation of RFPs, MoU, and SLA to align scope and responsibilities.</li>
-                  <li>Reported directly to the CIO, presenting vendor assessments and POC outcomes to support decisions.</li>
-                </ul>
-              </div>
-
-              <div class="item item--sub">
-                <div class="role">
-                  <strong>GFT Technologies — Business Analyst</strong>
-                </div>
-                <div class="domain">Digital Banking – Payments, AML, Card Systems</div>
-                <ul>
-                  <li>Contributed to digital banking initiatives across payments, AML, card systems, and API-based integrations.</li>
-                  <li>Worked with Product Owners, internal stakeholders, and multiple agile squads to clarify requirements and align backlog priorities.</li>
-                  <li>Analysed cross-team dependencies, delivery risks, and end-to-end payment flows.</li>
-                  <li>Communicated options, impacts, and trade-offs to support scope and release decisions.</li>
-                  <li>Supported UAT and release readiness in an agile delivery environment.</li>
-                </ul>
-              </div>
-
-              <div class="item item--sub">
-                <div class="role">
-                  <strong>JACCS Finance / FE Credit — Business Analyst</strong>
-                </div>
-                <div class="domain">Finacle Core Banking, PEGA Loan Origination System (LOS)</div>
-                <ul>
-                  <li>Collaborated with business stakeholders to understand lending processes and change requests.</li>
-                  <li>Clarified system behaviour through discussions with vendors and internal IT teams.</li>
-                  <li>Assisted in evaluating solution options and implementation impacts.</li>
-                  <li>Managed UAT planning, execution, and business approval.</li>
-                  <li>Provided post-release support during stabilisation and issue resolution.</li>
-                </ul>
-              </div>
-
-              <div class="item item--sub">
-                <div class="role">
-                  <strong>N2N – AFE (Hong Kong) — Business Analyst / IT Coordinator</strong>
-                </div>
-                <div class="domain">Capital Markets – Securities Trading Systems</div>
-                <ul>
-                  <li>Worked directly with client users to understand securities trading workflows.</li>
-                  <li>Coordinated between offshore development teams and business users during testing and UAT.</li>
-                  <li>Facilitated issue clarification and user acceptance discussions.</li>
-                  <li>Maintained clear communication between clients and delivery teams.</li>
-                  <li>Assisted with go-live preparation and early production support.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2>Implementation &amp; Delivery Experience</h2>
-
-          <div class="item">
-            <div class="role">
-              <strong>Cadena Vietnam — Implementation Consultant</strong>
-              <span class="when">2015</span>
-            </div>
-            <div class="domain">HR, Payroll &amp; Time Attendance Systems</div>
-            <ul>
-              <li>Clarified client requirements and implementation scope for HR, payroll, and time attendance solutions.</li>
-              <li>Led requirement workshops and configuration discussions to align system setup with business needs.</li>
-              <li>Managed implementation activities across client and delivery teams to ensure timely execution.</li>
-              <li>Delivered end-user training and prepared clients for go-live.</li>
-              <li>Handled post-implementation adjustments and clarified system behaviour during stabilization.</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <div class="role">
-              <strong>Capital Market Solutions — Implementation &amp; Support Consultant</strong>
-              <span class="when">2008 – 2010</span>
-            </div>
-            <div class="domain">Securities Trading – Front &amp; Back Office</div>
-            <ul>
-              <li>Engaged with client/users to understand trading workflows and day-to-day operational requirements.</li>
-              <li>Conducted system demonstrations and user training for front and back office functions.</li>
-              <li>Served as the main point of contact for operational questions and issue escalation.</li>
-              <li>Participated in UAT and supported production go-live activities.</li>
-              <li>Maintained regular client communication during post-go-live stabilization.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2>Process &amp; Product Analysis Experience</h2>
-
-          <div class="item">
-            <div class="role">
-              <strong>PPF Vietnam Finance (Home Credit) — Process Analyst</strong>
-              <span class="when">2012 – 2014</span>
-            </div>
-            <div class="domain">Consumer Finance – Lending &amp; Operations</div>
-            <ul>
-              <li>Analysed and mapped end-to-end lending and operational processes using BPMN.</li>
-              <li>Documented current-state processes and designed improved future-state flows.</li>
-              <li>Identified process gaps and inefficiencies based on operational and business requirements.</li>
-              <li>Produced process documentation to support business approvals and system changes.</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <div class="role">
-              <strong>ANZ Bank — Product / Process Analyst</strong>
-              <span class="when">2010 – 2012</span>
-            </div>
-            <div class="domain">Wealth Management &amp; Investment Products</div>
-            <ul>
-              <li>Analysed and improved investment product processes in close collaboration with Relationship Managers and Product Managers.</li>
-              <li>Mapped end-to-end workflows using BPMN and translated product logic into clear process and calculation flows.</li>
-              <li>Worked with Marketing and IT teams to deliver automated reporting and form-filling tools for RM customer proposals.</li>
-              <li>Acted as user representative, managing requirements, supporting test cases, and coordinating User Acceptance Testing.</li>
-            </ul>
-          </div>
-        </section>
-        
-      </div>
-
-      <!-- RIGHT -->
-      <aside class="right">
-        <section class="section">
-          <h2>Education &amp; Certifications</h2>
-          <ul>
-            <li><strong>Master of Business Technologies (Part-time)</strong> – Haaga-Helia UAS (2026–2027, expected)</li>
-            <li><strong>Master of Marketing &amp; Sales Service</strong> – CFVG (2006–2008)</li>
-            <li><strong>Bachelor of IT &amp; Multimedia</strong> – RMIT University Vietnam (2002–2005)</li>
-            <li><strong>Six Sigma Black Belt</strong> (2012)</li>
-          </ul>
-        </section>
-      </aside>
-    </main>
-
+  <!-- ✅ PDF button -->
+  <div class="toolbar">
+    <button class="btn" onclick="window.print()">Download PDF</button>
   </div>
-</div>
+
+  <div class="page">
+    <div class="card">
+
+      <!-- HEADER -->
+      <header>
+        <div class="header-grid">
+          <div class="avatar-frame">
+            <img src="images/MyPhoto_v3.png" alt="Hanh Nguyen" class="avatar-img"/>
+          </div>
+
+          <div>
+            <h1>Hanh Nguyen</h1>
+            <p class="headline">
+              Business Analyst / IT Consultant – Banking &amp; Financial Services<br/>
+              <strong>10 years experience</strong> · Client-facing · Strong in communication &amp; facilitation
+            </p>
+
+            <div class="groups">
+              <!-- CONTACT -->
+              <div class="group">
+                <h3>Contact &amp; Availability</h3>
+                <div class="chips">
+                  <span class="chip">📍 Espoo, Finland</span>
+
+                  <span class="chip email-chip">
+                    <span class="icon">✉️</span>
+                    <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
+                  </span>
+
+                  <span class="chip">📞 <a href="tel:+358415764445">+358 41 576 4445</a></span>
+
+                  <span class="chip linkedin-chip">
+                    <span class="icon">in</span>
+                    <a href="https://www.linkedin.com/in/hanh-nguyen-b80b38a1" target="_blank" rel="noopener">LinkedIn</a>
+                  </span>
+
+                  <span class="chip">English (Fluent)</span>
+                  <span class="chip">Vietnamese (Native)</span>
+                  <span class="chip">Finnish (A2)</span>
+                </div>
+
+                <div class="spacer"></div>
+
+                <div class="mini">
+                  <span>Retail Banking</span>
+                  <span>Consumer Finance</span>
+                  <span>Digital Banking</span>
+                  <span>Capital Markets</span>
+                  <span>Risk &amp; Compliance</span>
+                  <span>Enterprise Systems</span>
+                </div>
+              </div>
+
+              <!-- SKILLS -->
+              <div class="group">
+                <h3>Key Skills</h3>
+                <div class="chips">
+                  <span class="chip">Client &amp; stakeholder communication</span>
+                  <span class="chip">Requirements elicitation &amp; clarification</span>
+                  <span class="chip">Workshop facilitation &amp; expectation management</span>
+                  <span class="chip">Agile delivery &amp; squad collaboration</span>
+                  <span class="chip">UAT coordination &amp; business sign-off</span>
+                  <span class="chip">Presentation &amp; decision support</span>
+                  <span class="chip">Vendor coordination &amp; negotiation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- BODY -->
+      <main>
+        <!-- LEFT -->
+        <div class="left">
+
+          <section class="section">
+            <h2>Professional Summary</h2>
+            <p>
+              Business Analyst and IT Consultant with 10 years of experience in
+              banking and financial services, including retail banking, digital banking,
+              consumer finance, and capital markets.
+            </p>
+            <p>
+              Experienced in working directly with business stakeholders, internal clients, vendors,
+              and IT leadership to clarify needs, manage expectations, and support informed decisions.
+              Strong in communication, facilitation, and presentation across requirements, UAT,
+              and go-live phases in regulated environments.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2>BA Experience – Banking &amp; Financial Services</h2>
+
+            <div class="item item--shade">
+              <div class="role">
+                <strong>Cross-functional Banking Programs</strong>
+                <span class="when">2016 – 2023</span>
+              </div>
+              <div class="sub">(Asia Commercial Bank, GFT Technologies, FE Credit, JACCS Finance, N2N-AFE)</div>
+
+              <ul>
+                <li>Business Analyst roles across multiple banking organisations and delivery models.</li>
+                <li>Worked in settings requiring regular interaction with business, IT, and vendor teams.</li>
+                <li>Experience spanning core banking, digital banking, compliance, and capital markets systems.</li>
+              </ul>
+
+              <div class="subhead">Selected Banking &amp; Finance Roles</div>
+
+              <div class="subitems">
+                <div class="item item--sub">
+                  <div class="role">
+                    <strong>Asia Commercial Bank (ACB) — Business Analyst</strong>
+                  </div>
+                  <div class="domain">Asset Valuation &amp; Collateral Appraisal Systems</div>
+                  <ul>
+                    <li>Worked directly with business users to clarify requirements for asset valuation and collateral appraisal.</li>
+                    <li>Clarified business rules and system behaviour through structured discussions and scenario-based analysis.</li>
+                    <li>Translated business requirements into clear functional specifications aligned with IT teams and vendors.</li>
+                    <li>Explained impacts, acceptance criteria, and change implications to stakeholders during UAT.</li>
+                    <li>Managed UAT coordination and business sign-off in a regulated banking environment.</li>
+                  </ul>
+                </div>
+
+                <div class="item item--sub">
+                  <div class="role">
+                    <strong>Asia Commercial Bank (ACB) — IT Vendor Management</strong>
+                  </div>
+                  <div class="domain">SIEM / Splunk, eKYC, Security &amp; Compliance</div>
+                  <ul>
+                    <li>Worked with Heads of IT to build and refine vendor evaluation and selection processes.</li>
+                    <li>Participated in IT sourcing project initiatives, coordinating technical reviews and POC activities.</li>
+                    <li>Known for keeping business, security, and technical teams aligned on feasibility, risk, and compliance.</li>
+                    <li>Supported preparation of RFPs, MoU, and SLA to align scope and responsibilities.</li>
+                    <li>Reported directly to the CIO, presenting vendor assessments and POC outcomes to support decisions.</li>
+                  </ul>
+                </div>
+
+                <div class="item item--sub">
+                  <div class="role">
+                    <strong>GFT Technologies — Business Analyst</strong>
+                  </div>
+                  <div class="domain">Digital Banking – Payments, AML, Card Systems</div>
+                  <ul>
+                    <li>Contributed to digital banking initiatives across payments, AML, card systems, and API-based integrations.</li>
+                    <li>Worked with Product Owners, internal stakeholders, and multiple agile squads to clarify requirements and align backlog priorities.</li>
+                    <li>Analysed cross-team dependencies, delivery risks, and end-to-end payment flows.</li>
+                    <li>Communicated options, impacts, and trade-offs to support scope and release decisions.</li>
+                    <li>Supported UAT and release readiness in an agile delivery environment.</li>
+                  </ul>
+                </div>
+
+                <div class="item item--sub">
+                  <div class="role">
+                    <strong>JACCS Finance / FE Credit — Business Analyst</strong>
+                  </div>
+                  <div class="domain">Finacle Core Banking, PEGA Loan Origination System (LOS)</div>
+                  <ul>
+                    <li>Collaborated with business stakeholders to understand lending processes and change requests.</li>
+                    <li>Clarified system behaviour through discussions with vendors and internal IT teams.</li>
+                    <li>Assisted in evaluating solution options and implementation impacts.</li>
+                    <li>Managed UAT planning, execution, and business approval.</li>
+                    <li>Provided post-release support during stabilisation and issue resolution.</li>
+                  </ul>
+                </div>
+
+                <div class="item item--sub">
+                  <div class="role">
+                    <strong>N2N – AFE (Hong Kong) — Business Analyst / IT Coordinator</strong>
+                  </div>
+                  <div class="domain">Capital Markets – Securities Trading Systems</div>
+                  <ul>
+                    <li>Worked directly with client users to understand securities trading workflows.</li>
+                    <li>Coordinated between offshore development teams and business users during testing and UAT.</li>
+                    <li>Facilitated issue clarification and user acceptance discussions.</li>
+                    <li>Maintained clear communication between clients and delivery teams.</li>
+                    <li>Assisted with go-live preparation and early production support.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Implementation &amp; Delivery Experience</h2>
+
+            <div class="item">
+              <div class="role">
+                <strong>Cadena Vietnam — Implementation Consultant</strong>
+                <span class="when">2015</span>
+              </div>
+              <div class="domain">HR, Payroll &amp; Time Attendance Systems</div>
+              <ul>
+                <li>Clarified client requirements and implementation scope for HR, payroll, and time attendance solutions.</li>
+                <li>Led requirement workshops and configuration discussions to align system setup with business needs.</li>
+                <li>Managed implementation activities across client and delivery teams to ensure timely execution.</li>
+                <li>Delivered end-user training and prepared clients for go-live.</li>
+                <li>Handled post-implementation adjustments and clarified system behaviour during stabilization.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="role">
+                <strong>Capital Market Solutions — Implementation &amp; Support Consultant</strong>
+                <span class="when">2008 – 2010</span>
+              </div>
+              <div class="domain">Securities Trading – Front &amp; Back Office</div>
+              <ul>
+                <li>Engaged with client/users to understand trading workflows and day-to-day operational requirements.</li>
+                <li>Conducted system demonstrations and user training for front and back office functions.</li>
+                <li>Served as the main point of contact for operational questions and issue escalation.</li>
+                <li>Participated in UAT and supported production go-live activities.</li>
+                <li>Maintained regular client communication during post-go-live stabilization.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ✅ Place Process/Product here (so it doesn't get missed) -->
+          <section class="section">
+            <h2>Process &amp; Product Analysis Experience</h2>
+
+            <div class="item">
+              <div class="role">
+                <strong>PPF Vietnam Finance (Home Credit) — Process Analyst</strong>
+                <span class="when">2012 – 2014</span>
+              </div>
+              <div class="domain">Consumer Finance – Lending &amp; Operations</div>
+              <ul>
+                <li>Analysed and mapped end-to-end lending and operational processes using BPMN.</li>
+                <li>Documented current-state processes and designed improved future-state flows.</li>
+                <li>Identified process gaps and inefficiencies based on operational and business requirements.</li>
+                <li>Produced process documentation to support business approvals and system changes.</li>
+              </ul>
+            </div>
+
+            <div class="item">
+              <div class="role">
+                <strong>ANZ Bank — Product / Process Analyst</strong>
+                <span class="when">2010 – 2012</span>
+              </div>
+              <div class="domain">Wealth Management &amp; Investment Products</div>
+              <ul>
+                <li>Analysed and improved investment product processes with Relationship Managers and Product Managers.</li>
+                <li>Mapped end-to-end workflows using BPMN and translated product logic into process and calculation flows.</li>
+                <li>Worked with Marketing and IT teams to deliver automated reporting and form-filling tools for RM proposals.</li>
+                <li>Acted as user representative, managing requirements, test cases, and coordinating User Acceptance Testing.</li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="right">
+          <section class="section">
+            <h2>Education &amp; Certifications</h2>
+            <ul>
+              <li><strong>Master of Business Technologies (Part-time)</strong> – Haaga-Helia UAS (2026–2027, expected)</li>
+              <li><strong>Master of Marketing &amp; Sales Service</strong> – CFVG (2006–2008)</li>
+              <li><strong>Bachelor of IT &amp; Multimedia</strong> – RMIT University Vietnam (2002–2005)</li>
+              <li><strong>Six Sigma Black Belt</strong> (2012)</li>
+            </ul>
+          </section>
+        </aside>
+      </main>
+
+    </div>
+  </div>
 </body>
 </html>
