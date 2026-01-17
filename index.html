@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nguyen Thi Ngoc Hanh — CV</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Hanh Nguyen — CV</title>
+
   <style>
     :root{
       --bg:#f7f8fb;
@@ -12,7 +13,6 @@
       --muted:#6b7280;
       --line:#e5e7eb;
       --chip:#f3f4f6;
-      --chipText:#111827;
       --accent:#0f172a;
     }
     *{box-sizing:border-box}
@@ -20,456 +20,377 @@
       margin:0;
       background:var(--bg);
       color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       line-height:1.45;
     }
 
-    /* Layout */
-    .page{
-      max-width: 1020px;
-      margin: 26px auto;
-      padding: 0 14px;
-    }
+    .page{max-width:1020px;margin:26px auto;padding:0 14px}
     .card{
       background:var(--card);
       border:1px solid var(--line);
       border-radius:16px;
       overflow:hidden;
-      box-shadow: 0 8px 24px rgba(17,24,39,.06);
+      box-shadow:0 8px 24px rgba(17,24,39,.06);
     }
 
-    /* Header */
+    /* HEADER */
     header{
-      padding: 22px 22px 18px;
+      padding:22px;
       border-bottom:1px solid var(--line);
     }
     .header-grid{
       display:grid;
-      grid-template-columns: 140px 1fr;
-      gap: 18px;
+      grid-template-columns:140px 1fr;
+      gap:20px;
       align-items:start;
     }
+
     .avatar{
-      width: 132px;
-      height: 132px;
-      border-radius: 14px;
-      object-fit: cover;
+      width:140px;
+      aspect-ratio:1/1;
+      border-radius:14px;
       border:1px solid var(--line);
-      background:#fff;
+      object-fit:cover;
+      background:#eef2ff;
     }
+
     h1{
-      margin: 0 0 6px;
-      font-size: 34px;
-      letter-spacing: .2px;
+      margin:0 0 6px;
+      font-size:34px;
       color:var(--accent);
     }
     .headline{
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 15px;
+      margin:0 0 14px;
+      font-size:15px;
+      color:var(--muted);
     }
 
+    /* CONTACT + SKILLS */
     .groups{
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 10px;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
     }
     .group{
       border:1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 12px 10px;
-      background: #fff;
+      border-radius:14px;
+      padding:12px;
+      background:#fff;
+      display:flex;
+      flex-direction:column;
+      min-height:220px;
     }
     .group h3{
-      margin: 0 0 8px;
-      font-size: 12px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--accent);
+      margin:0 0 8px;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--accent);
     }
 
     .chips{
       display:flex;
-      flex-wrap: wrap;
-      gap: 8px;
+      flex-wrap:wrap;
+      gap:8px;
     }
     .chip{
-      display:inline-flex;
-      align-items:center;
-      gap: 7px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: var(--chip);
-      border: 1px solid var(--line);
-      color: var(--chipText);
-      font-size: 12.5px;
-      white-space: nowrap;
+      padding:7px 10px;
+      border-radius:999px;
+      background:var(--chip);
+      border:1px solid var(--line);
+      font-size:12.5px;
+      white-space:nowrap;
     }
     .chip a{color:inherit;text-decoration:none}
     .chip a:hover{text-decoration:underline}
-    .ico{
-      width: 14px; height: 14px;
-      display:inline-block;
-      opacity:.75;
+
+    .spacer{flex:1}
+    .mini{
+      margin-top:10px;
+      padding-top:10px;
+      border-top:1px dashed var(--line);
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .mini span{
+      padding:5px 9px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
     }
 
-    /* Main */
+    /* BODY */
     main{
       display:grid;
-      grid-template-columns: 1.7fr 1fr;
-      gap: 0;
+      grid-template-columns:1.7fr 1fr;
     }
-    .left, .right{
-      padding: 18px 22px 22px;
+    .left,.right{
+      padding:18px 22px 22px;
     }
     .right{
       border-left:1px solid var(--line);
-      background: #fcfcfd;
+      background:#fcfcfd;
     }
 
     .section{
-      padding: 14px 0 18px;
+      padding:14px 0 18px;
       border-bottom:1px solid var(--line);
     }
-    .section:last-child{border-bottom:none;padding-bottom:4px}
+    .section:last-child{border-bottom:none}
     h2{
       margin:0 0 10px;
-      font-size: 12px;
+      font-size:12px;
       letter-spacing:.12em;
-      text-transform: uppercase;
-      color: var(--accent);
+      text-transform:uppercase;
+      color:var(--accent);
     }
-    p{
-      margin:0 0 10px;
-      font-size: 14px;
-      color: var(--text);
-    }
-    .muted{color:var(--muted)}
-    ul{
-      margin: 8px 0 0;
-      padding-left: 18px;
-    }
-    li{margin: 6px 0; font-size: 14px;}
+    p{margin:0 0 10px;font-size:14px}
+    ul{margin:8px 0 0;padding-left:18px}
+    li{margin:6px 0;font-size:14px}
+
     .role{
       display:flex;
-      justify-content: space-between;
-      gap: 10px;
+      justify-content:space-between;
       align-items:baseline;
-      margin: 10px 0 4px;
+      gap:10px;
+      margin:10px 0 4px;
     }
-    .role strong{font-size: 15px; color:var(--accent)}
-    .when{font-size: 12.5px; color:var(--muted); white-space:nowrap}
-    .sub{
-      font-size: 13px;
-      color: var(--muted);
-      margin: 0 0 6px;
-    }
-    .domain{
-      font-size: 12.5px;
-      color: var(--muted);
-      margin: 6px 0 6px;
-    }
-    .pillnote{
-      display:inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background:#fff;
-      border:1px solid var(--line);
-      color:var(--muted);
-      font-size: 12px;
-      margin-top: 6px;
-    }
+    .role strong{font-size:15px;color:var(--accent)}
+    .when{font-size:12.5px;color:var(--muted)}
+    .sub,.domain{font-size:13px;color:var(--muted);margin:0 0 6px}
 
-    /* Responsive */
-    @media (max-width: 980px){
-      main{grid-template-columns: 1fr}
+    @media (max-width:980px){
+      main{grid-template-columns:1fr}
       .right{border-left:none;border-top:1px solid var(--line)}
-      .groups{grid-template-columns: 1fr}
-      .header-grid{grid-template-columns: 1fr; }
-      .avatar{width: 120px; height: 120px;}
+      .groups{grid-template-columns:1fr}
+      .header-grid{grid-template-columns:1fr}
+      .avatar{width:120px}
     }
-
-    /* Print */
     @media print{
       body{background:#fff}
-      .page{margin:0;max-width:none;padding:0}
+      .page{margin:0;padding:0}
       .card{border:none;box-shadow:none;border-radius:0}
       .right{background:#fff}
-      a{text-decoration:none}
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="card">
+<div class="page">
+  <div class="card">
 
-      <!-- HEADER -->
-      <header>
-        <div class="header-grid">
-          <!-- Replace avatar.jpg with your image path -->
-          <img class="avatar" src="avatar.jpg" alt="Nguyen Thi Ngoc Hanh" />
+    <!-- HEADER -->
+    <header>
+      <div class="header-grid">
+        <img src="avatar.jpg" alt="Hanh Nguyen" class="avatar"/>
 
-          <div>
-            <h1>Nguyen Thi Ngoc Hanh</h1>
-            <p class="headline">
-              Business Analyst transitioning into Consulting – Digital Systems &amp; Quality (UAT / QA)
-            </p>
+        <div>
+          <h1>Hanh Nguyen</h1>
+          <p class="headline">
+            Business Analyst / IT Consultant – Banking &amp; Financial Services<br/>
+            <strong>10+ years experience</strong> · Client-facing · Strong in communication &amp; facilitation
+          </p>
 
-            <!-- CONTACT + SKILLS grouped -->
-            <div class="groups">
-
-              <!-- CONTACT GROUP -->
-              <div class="group">
-                <h3>Contact &amp; Availability</h3>
-                <div class="chips">
-                  <span class="chip">
-                    <span class="ico">📍</span> Espoo, Finland
-                  </span>
-                  <span class="chip">
-                    <span class="ico">✉️</span>
-                    <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
-                  </span>
-                  <span class="chip">
-                    <span class="ico">📞</span>
-                    <a href="tel:+358415764445">+358 41 576 4445</a>
-                  </span>
-                  <span class="chip">
-                    <span class="ico">🔗</span>
-                    <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-                  </span>
-                  <span class="chip"><span class="ico">🌍</span> English (Fluent)</span>
-                  <span class="chip"><span class="ico">🌍</span> Vietnamese (Native)</span>
-                  <span class="chip"><span class="ico">🌍</span> Finnish (A2)</span>
-                </div>
+          <div class="groups">
+            <!-- CONTACT -->
+            <div class="group">
+              <h3>Contact &amp; Availability</h3>
+              <div class="chips">
+                <span class="chip">📍 Espoo, Finland</span>
+                <span class="chip">✉️ <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a></span>
+                <span class="chip">📞 <a href="tel:+358415764445">+358 41 576 4445</a></span>
+                <span class="chip">🔗 LinkedIn</span>
+                <span class="chip">English (Fluent)</span>
+                <span class="chip">Vietnamese (Native)</span>
+                <span class="chip">Finnish (A2)</span>
               </div>
 
-              <!-- SKILLS GROUP -->
-              <div class="group">
-                <h3>Core Skills</h3>
-                <div class="chips">
-                  <span class="chip">Requirements elicitation &amp; analysis</span>
-                  <span class="chip">Agile delivery &amp; sprint collaboration</span>
-                  <span class="chip">UAT coordination &amp; validation</span>
-                  <span class="chip">Squad delivery (PO, Dev, Architect, QA)</span>
-                  <span class="chip">Stakeholder facilitation &amp; alignment</span>
-                  <span class="chip">Presentation &amp; decision support</span>
-                  <span class="chip">Vendor coordination &amp; negotiation</span>
-                </div>
-              </div>
+              <div class="spacer"></div>
 
+              <div class="mini">
+                <span>Payments</span>
+                <span>AML</span>
+                <span>Finacle</span>
+                <span>PEGA LOS</span>
+                <span>SIEM / Splunk</span>
+                <span>eKYC</span>
+              </div>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="group">
+              <h3>Key Skills</h3>
+              <div class="chips">
+                <span class="chip">Client &amp; stakeholder communication</span>
+                <span class="chip">Requirements elicitation &amp; clarification</span>
+                <span class="chip">Workshop facilitation &amp; expectation management</span>
+                <span class="chip">Agile delivery &amp; squad collaboration</span>
+                <span class="chip">UAT coordination &amp; business sign-off</span>
+                <span class="chip">Presentation &amp; decision support</span>
+                <span class="chip">Vendor coordination &amp; negotiation</span>
+              </div>
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <!-- BODY -->
-      <main>
-        <!-- LEFT -->
-        <div class="left">
+    <!-- BODY -->
+    <main>
+      <!-- LEFT -->
+      <div class="left">
 
-          <section class="section">
-            <h2>Professional Summary</h2>
-            <p>
-              Business Analyst and IT Consultant with <strong>10+ years of experience</strong> in
-              <strong>banking and financial services</strong>, including retail banking, digital banking,
-              consumer finance, and capital markets.
-            </p>
-            <p>
-              Known for strong <strong>communication, presentation, and negotiation</strong> skills, working closely with
-              business users, Product Owners, system architects, development teams, QA, and vendors. Experienced in
-              supporting decision-making and delivery outcomes across requirements, UAT, and go-live phases in regulated
-              banking environments.
-            </p>
-          </section>
+        <section class="section">
+          <h2>Professional Summary</h2>
+          <p>
+            Business Analyst and IT Consultant with <strong>10+ years of experience</strong> in
+            <strong>banking and financial services</strong>, including retail banking, digital banking,
+            consumer finance, and capital markets.
+          </p>
+          <p>
+            Experienced in working directly with business stakeholders, internal clients, vendors,
+            and IT leadership to clarify needs, manage expectations, and support informed decisions.
+            Strong in communication, facilitation, and presentation across requirements, UAT,
+            and go-live phases in regulated environments.
+          </p>
+        </section>
 
-          <section class="section">
-            <h2>BA Experience – Banking &amp; Financial Services</h2>
+        <section class="section">
+          <h2>BA Experience – Banking &amp; Financial Services</h2>
 
-            <div class="role">
-              <strong>Cross-functional Banking Programs</strong>
-              <span class="when">2016 – 2023</span>
-            </div>
-            <div class="sub">(Asia Commercial Bank, GFT Technologies, FE Credit, JACCS Finance, N2N-AFE)</div>
+          <div class="role">
+            <strong>Cross-functional Banking Programs</strong>
+            <span class="when">2016 – 2023</span>
+          </div>
+          <div class="sub">(Asia Commercial Bank, GFT Technologies, FE Credit, JACCS Finance, N2N-AFE)</div>
 
-            <div class="role" style="margin-top:10px">
-              <strong>Business Analyst / IT Consultant – Banking &amp; Financial Services</strong>
-              <span class="when">—</span>
-            </div>
+          <ul>
+            <li>Worked across multiple banking programs involving business users, internal clients, IT teams, and vendors.</li>
+            <li>Supported stakeholders throughout the delivery lifecycle, from requirements clarification to UAT and go-live.</li>
+            <li>Facilitated discussions to resolve questions, align priorities, and manage expectations.</li>
+            <li>Acted as a key contact point for clarifications and escalations during delivery and UAT.</li>
+            <li>Presented options, impacts, and next steps to support timely decision-making.</li>
+          </ul>
+        </section>
 
-            <!-- Use the user-approved bullets -->
-            <ul>
-              <li>Support stakeholders throughout the delivery lifecycle, from requirements clarification to UAT and go-live.</li>
-              <li>Work closely with business users and technical teams to ensure shared understanding and smooth collaboration.</li>
-              <li>Facilitate discussions to resolve issues, manage expectations, and align priorities.</li>
-              <li>Act as a key contact point for questions, clarifications, and escalation during delivery and UAT phases.</li>
-              <li>Present impacts, options, and next steps clearly to support timely decisions.</li>
-              <li>Help ensure solutions meet business needs, regulatory expectations, and operational realities.</li>
-            </ul>
-          </section>
+        <section class="section">
+          <h2>Selected Banking &amp; Finance Roles</h2>
 
-          <section class="section">
-            <h2>Selected Banking &amp; Finance Roles</h2>
+          <!-- ACB BA -->
+          <div class="role">
+            <strong>Asia Commercial Bank (ACB) — Business Analyst</strong>
+          </div>
+          <div class="domain">Asset Valuation &amp; Collateral Appraisal Systems</div>
+          <ul>
+            <li>Worked directly with business users to clarify requirements for asset valuation and collateral appraisal.</li>
+            <li>Facilitated discussions to resolve business rule ambiguities and system behavior questions.</li>
+            <li>Translated business needs into functional requirements aligned with IT teams and vendors.</li>
+            <li>Supported stakeholder decisions during UAT by explaining impacts and acceptance criteria.</li>
+            <li>Coordinated UAT execution and business sign-off in a regulated banking environment.</li>
+          </ul>
 
-            <div class="role">
-              <strong>Asia Commercial Bank (ACB) — Business Analyst</strong>
-              <span class="when">—</span>
-            </div>
-            <div class="domain"><em>Domain:</em> Asset Valuation &amp; Collateral Appraisal Systems</div>
-            <ul>
-              <li>Work with business units to clarify requirements related to asset valuation and collateral appraisal.</li>
-              <li>Translate business needs into functional requirements aligned with IT teams and vendors.</li>
-              <li>Support UAT by clarifying system behavior, impacts, and acceptance criteria.</li>
-              <li>Coordinate UAT execution and business sign-off in a regulated banking environment.</li>
-            </ul>
+          <!-- ACB Vendor -->
+          <div class="role">
+            <strong>Asia Commercial Bank (ACB) — IT Vendor Management</strong>
+          </div>
+          <div class="domain">SIEM / Splunk, eKYC, Security &amp; Compliance</div>
+          <ul>
+            <li>Worked closely with Heads of IT to build and refine vendor evaluation and selection processes.</li>
+            <li>Participated in SIEM (Splunk) and eKYC initiatives, coordinating technical reviews and POC activities.</li>
+            <li>Facilitated discussions between business, security, and technical teams to assess feasibility and risks.</li>
+            <li>Supported preparation of RFPs, MoU, and SLA to align scope and responsibilities.</li>
+            <li><strong>Reported directly to the CIO</strong>, presenting vendor assessments and POC outcomes to support decisions.</li>
+          </ul>
 
-            <div style="height:12px"></div>
+          <!-- GFT -->
+          <div class="role">
+            <strong>GFT Technologies — Business Analyst</strong>
+          </div>
+          <div class="domain">Digital Banking – Payments, AML, Card Systems</div>
+          <ul>
+            <li>Worked with internal clients, Product Owners, and multiple squad teams across payments, AML, and card systems.</li>
+            <li>Facilitated requirement clarification and backlog discussions to align priorities across squads.</li>
+            <li>Supported cross-team discussions to address dependencies and delivery risks.</li>
+            <li>Presented impacts and options to stakeholders to support scope and release decisions.</li>
+            <li>Supported UAT and release readiness in an agile delivery environment.</li>
+          </ul>
 
-            <div class="role">
-              <strong>Asia Commercial Bank (ACB) — IT Vendor Management</strong>
-              <span class="when">—</span>
-            </div>
-            <div class="domain"><em>Domain:</em> Vendor Governance, SIEM/Splunk, eKYC, Security &amp; Compliance</div>
-            <ul>
-              <li>Support vendor governance activities in line with banking regulations and internal policies.</li>
-              <li>Work on initiatives including <strong>SIEM (Splunk)</strong> and <strong>eKYC</strong>, partnering with technical teams to review proposals and POC outcomes.</li>
-              <li>Support preparation and review of <strong>RFPs</strong>, <strong>MoU</strong>, <strong>SLA</strong>, and contract-related documents.</li>
-              <li>Coordinate between internal teams and vendors during delivery, escalations, and issue resolution.</li>
-            </ul>
+          <!-- JACCS -->
+          <div class="role">
+            <strong>JACCS Finance / FE Credit — Business Analyst</strong>
+          </div>
+          <div class="domain">Finacle Core Banking, PEGA Loan Origination System (LOS)</div>
+          <ul>
+            <li>Worked with business users to understand lending processes and change requests.</li>
+            <li>Facilitated discussions with vendors and IT teams to clarify system behavior.</li>
+            <li>Supported analysis of solution options and implementation impacts.</li>
+            <li>Coordinated UAT planning, execution, and business sign-off.</li>
+            <li>Supported post-release clarification and stabilization activities.</li>
+          </ul>
 
-            <div style="height:12px"></div>
+          <!-- N2N -->
+          <div class="role">
+            <strong>N2N – AFE (Hong Kong) — Business Analyst / IT Coordinator</strong>
+          </div>
+          <div class="domain">Capital Markets – Securities Trading Systems</div>
+          <ul>
+            <li>Worked directly with client users to understand securities trading workflows.</li>
+            <li>Coordinated between offshore development teams and business users during testing and UAT.</li>
+            <li>Facilitated issue clarification and user acceptance discussions.</li>
+            <li>Acted as a communication bridge between clients and delivery teams.</li>
+            <li>Supported go-live readiness and stabilization.</li>
+          </ul>
+        </section>
 
-            <div class="role">
-              <strong>GFT Technologies — Business Analyst</strong>
-              <span class="when">—</span>
-            </div>
-            <div class="domain"><em>Domain:</em> Digital Banking — Payments, AML, Card Systems</div>
-            <ul>
-              <li>Supported digital banking initiatives across payments, AML, and card-related squads.</li>
-              <li>Worked with POs, system architects, developers, and QA in an agile environment.</li>
-              <li>Facilitated requirement clarification, backlog refinement, and scope alignment across squads.</li>
-              <li>Supported release readiness, UAT, and delivery coordination.</li>
-            </ul>
+        <section class="section">
+          <h2>Implementation &amp; Delivery Experience</h2>
 
-            <div style="height:12px"></div>
+          <div class="role">
+            <strong>Cadena Vietnam — Business Analyst / Implementation Consultant</strong>
+          </div>
+          <div class="domain">HR, Payroll &amp; Time Attendance Systems</div>
+          <ul>
+            <li>Worked with client stakeholders to clarify requirements and implementation expectations.</li>
+            <li>Facilitated requirement workshops and solution configuration discussions.</li>
+            <li>Coordinated delivery activities between clients and implementation teams.</li>
+            <li>Delivered end-user training and supported go-live preparation.</li>
+            <li>Supported post-implementation stabilization and issue clarification.</li>
+          </ul>
 
-            <div class="role">
-              <strong>JACCS Finance / FE Credit — Business Analyst</strong>
-              <span class="when">—</span>
-            </div>
-            <div class="domain"><em>Domain:</em> Consumer Finance — Finacle Core Banking, PEGA Loan Origination System (LOS)</div>
-            <ul>
-              <li>Supported lending and consumer finance systems built on <strong>Finacle</strong> and <strong>PEGA LOS</strong>.</li>
-              <li>Worked with business users and vendors to clarify lending processes and system behavior.</li>
-              <li>Supported UAT planning, execution, and business sign-off.</li>
-              <li>Assisted stakeholders in assessing feasibility and implementation impacts.</li>
-            </ul>
+          <div class="role">
+            <strong>CMS – Capital Market Solutions — Implementation &amp; Support Consultant</strong>
+          </div>
+          <div class="domain">Securities Trading – Front &amp; Back Office</div>
+          <ul>
+            <li>Worked directly with client users to understand trading operations and support needs.</li>
+            <li>Delivered system demos and training sessions.</li>
+            <li>Acted as a primary contact point for questions and escalations.</li>
+            <li>Supported UAT and go-live activities.</li>
+            <li>Maintained ongoing client communication during stabilization.</li>
+          </ul>
+        </section>
 
-            <div style="height:12px"></div>
+      </div>
 
-            <div class="role">
-              <strong>N2N – AFE (Hong Kong) — Business Analyst / IT Coordinator</strong>
-              <span class="when">—</span>
-            </div>
-            <div class="domain"><em>Domain:</em> Capital Markets — Securities Trading Systems</div>
-            <ul>
-              <li>Supported customization of securities trading systems for capital markets clients.</li>
-              <li>Coordinated between offshore development teams and business users during testing and UAT.</li>
-              <li>Supported issue clarification, user acceptance, and sign-off.</li>
-            </ul>
-          </section>
+      <!-- RIGHT -->
+      <aside class="right">
+        <section class="section">
+          <h2>Education &amp; Certifications</h2>
+          <ul>
+            <li><strong>Master of Business Technologies (Part-time)</strong> – Haaga-Helia UAS (2026–2027, expected)</li>
+            <li><strong>Master of Marketing &amp; Sales Service</strong> – CFVG (2006–2008)</li>
+            <li><strong>Bachelor of IT &amp; Multimedia</strong> – RMIT University Vietnam (2002–2005)</li>
+            <li><strong>Six Sigma Black Belt</strong> (2012)</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
 
-          <section class="section">
-            <h2>Implementation &amp; Delivery Experience</h2>
-
-            <div class="role">
-              <strong>Cadena Vietnam — Business Analyst / Implementation Consultant</strong>
-              <span class="when">—</span>
-            </div>
-            <div class="domain"><em>Domain:</em> HR, Payroll &amp; Time Attendance Systems</div>
-            <ul>
-              <li>Supported implementation projects from requirements to go-live.</li>
-              <li>Facilitated requirement workshops and stakeholder interviews.</li>
-              <li>Coordinated delivery activities and supported end-user training.</li>
-              <li>Assisted with go-live preparation and post-implementation stabilization.</li>
-            </ul>
-
-            <div style="height:12px"></div>
-
-            <div class="role">
-              <strong>CMS – Capital Market Solutions — Implementation &amp; Support Consultant</strong>
-              <span class="when">—</span>
-            </div>
-            <div class="domain"><em>Domain:</em> Securities Trading – Front &amp; Back Office</div>
-            <ul>
-              <li>Supported implementation of securities trading systems for brokerage firms.</li>
-              <li>Delivered system demos and training sessions to business users.</li>
-              <li>Acted as a contact point for requirement clarification and post-go-live support.</li>
-            </ul>
-          </section>
-
-        </div>
-
-        <!-- RIGHT -->
-        <aside class="right">
-
-          <section class="section">
-            <h2>Education &amp; Certifications</h2>
-
-            <div class="role">
-              <strong>Master of Business Technologies (Part-time)</strong>
-              <span class="when">01/2026 – 06/2027</span>
-            </div>
-            <div class="sub">Haaga-Helia UAS, Finland <span class="pillnote">expected</span></div>
-
-            <div style="height:10px"></div>
-
-            <div class="role">
-              <strong>Master of Marketing &amp; Sales Service</strong>
-              <span class="when">2006 – 2008</span>
-            </div>
-            <div class="sub">CFVG (ESCP-EAP &amp; Paris 1)</div>
-
-            <div style="height:10px"></div>
-
-            <div class="role">
-              <strong>Bachelor of IT &amp; Multimedia</strong>
-              <span class="when">2002 – 2005</span>
-            </div>
-            <div class="sub">RMIT University Vietnam</div>
-
-            <div style="height:10px"></div>
-
-            <div class="role">
-              <strong>Six Sigma Black Belt</strong>
-              <span class="when">2012</span>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Quick Highlights</h2>
-            <ul>
-              <li><strong>Digital Banking:</strong> Payments, AML, Card Systems</li>
-              <li><strong>Core Banking / Lending:</strong> Finacle, PEGA LOS</li>
-              <li><strong>Security &amp; Compliance:</strong> SIEM/Splunk, eKYC, POC, RFP/SLA</li>
-              <li><strong>Capital Markets:</strong> Securities Trading Systems</li>
-              <li><strong>Delivery:</strong> UAT coordination, sign-off, go-live support</li>
-            </ul>
-          </section>
-
-          <section class="section">
-            <h2>Notes</h2>
-            <p class="muted" style="font-size:13px;margin:0">
-              Replace <code>avatar.jpg</code> and the LinkedIn <code>href</code> in the header.
-              Print-friendly layout included.
-            </p>
-          </section>
-
-        </aside>
-      </main>
-
-    </div>
   </div>
+</div>
 </body>
 </html>
+
