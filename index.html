@@ -156,6 +156,25 @@
       line-height:1;
     }
 
+    .linkedin-chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    
+    .linkedin-chip .icon{
+      width:22px;
+      height:22px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:#e0f2fe;   /* xanh nhạt */
+      color:#075985;        /* xanh LinkedIn đậm */
+      font-size:12px;
+      font-weight:600;
+      line-height:1;
+    }
 
     .spacer{flex:1}
 
@@ -296,6 +315,7 @@
       .item--shade{box-shadow:none}
       .item--sub{box-shadow:none}
     }
+    
   </style>
 </head>
 
@@ -330,7 +350,14 @@
                 </span>
 
                 <span class="chip">📞 <a href="tel:+358415764445">+358 41 576 4445</a></span>
-                <span class="chip">🔗 LinkedIn</span>
+
+                <span class="chip linkedin-chip">
+                  <span class="icon">in</span>
+                  <a href="https://www.linkedin.com/in/hanh-nguyen-b80b38a1" target="_blank" rel="noopener">
+                    LinkedIn
+                  </a>
+                </span>
+                
                 <span class="chip">English (Fluent)</span>
                 <span class="chip">Vietnamese (Native)</span>
                 <span class="chip">Finnish (A2)</span>
