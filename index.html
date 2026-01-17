@@ -54,17 +54,34 @@
 
     .avatar{
         width:150px;
-        height:auto;              /* 🔥 cho ảnh tự quyết chiều cao */
+        height:auto;              /* cho ảnh tự quyết chiều cao */
         max-height:190px;         /* tránh ảnh quá cao */
         border-radius:14px;
         border:1px solid var(--line);
         object-fit:contain;
         background:#fff;
-        padding:0;                /* 🔥 bỏ padding để sát 2 bên */
+        padding:0;                /*  bỏ padding để sát 2 bên */
         display:block;
     }
 
-
+    .avatar-frame{
+        width:150px;
+        height:150px;                 /* giữ dạng vuông như bạn đang dùng */
+        border-radius:14px;
+        border:1px solid var(--line);
+        background:#fff;
+        overflow:hidden;              /* crop trong khung */
+        display:flex;
+        align-items:flex-start;       /*  ưu tiên giữ tóc */
+        justify-content:center;
+      }
+      
+      .avatar-img{
+        width:170%;                   /* phóng to để 2 bên sát vai */
+        height:auto;
+        margin-top:6px;               /* chỉnh nhẹ nếu cần giữ tóc/forehead */
+        display:block;
+    }
 
     h1{
       margin:0 0 6px;
@@ -143,7 +160,6 @@
       margin:0 8px;
       color:#9ca3af;
       font-size:18px;      /* to hơn */
-      line-height:0;       /* giúp chấm gọn, không đẩy dòng */
       vertical-align:middle;
     }
 
@@ -269,7 +285,9 @@
       <div class="header-grid">
 
         <div class="avatar-wrap">
-          <img src="images/MyPhoto_v3.png" alt="Hanh Nguyen" class="avatar"/>          
+          <div class="avatar-frame">
+            <img src="images/MyPhoto.png" alt="Hanh Nguyen" class="avatar-img"/>
+          </div>             
         </div>
 
         <div>
