@@ -137,10 +137,14 @@
       border-radius:0;
       white-space:nowrap;
     }
-    .mini span:not(:first-child)::before{
+    
+      .mini span:not(:first-child)::before{
       content:"·";
       margin:0 8px;
       color:#9ca3af;
+      font-size:18px;      /* to hơn */
+      line-height:0;       /* giúp chấm gọn, không đẩy dòng */
+      vertical-align:middle;
     }
 
     /* BODY */
@@ -265,7 +269,7 @@
       <div class="header-grid">
 
         <div class="avatar-wrap">
-          <img src="images/MyPhoto_v2.png" alt="Hanh Nguyen" class="avatar"/>          
+          <img src="images/MyPhoto_v3.png" alt="Hanh Nguyen" class="avatar"/>          
         </div>
 
         <div>
