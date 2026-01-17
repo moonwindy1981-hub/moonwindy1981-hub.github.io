@@ -50,18 +50,20 @@
       display:flex;
       align-items:center; /* middle in its own box */
       justify-content:center;
-      height:100%;
     }
 
     .avatar{
-      width:150px;
-      height:150px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      object-fit:contain;        /* 🔥 quan trọng */
-      background:#ffffff;        /* nền trắng */
-      padding:6px;               /* tạo khoảng thở */
+        width:150px;
+        height:auto;              /* 🔥 cho ảnh tự quyết chiều cao */
+        max-height:190px;         /* tránh ảnh quá cao */
+        border-radius:14px;
+        border:1px solid var(--line);
+        object-fit:contain;
+        background:#fff;
+        padding:0;                /* 🔥 bỏ padding để sát 2 bên */
+        display:block;
     }
+
 
 
     h1{
