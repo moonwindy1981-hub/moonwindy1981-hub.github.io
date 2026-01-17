@@ -137,6 +137,26 @@
     .chip a{color:inherit;text-decoration:none}
     .chip a:hover{text-decoration:underline}
 
+    .email-chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    
+    .email-chip .icon{
+      width:22px;
+      height:22px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:#e0e7ff;        /* nền xanh nhạt */
+      color:#1e3a8a;             /* xanh đậm */
+      font-size:13px;
+      line-height:1;
+    }
+
+
     .spacer{flex:1}
 
     /* mini domains – dot separator (not pills) */
@@ -304,7 +324,11 @@
               <h3>Contact &amp; Availability</h3>
               <div class="chips">
                 <span class="chip">📍 Espoo, Finland</span>
-                <span class="chip">✉️ <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a></span>
+                <span class="chip email-chip">
+                  <span class="icon">✉️</span>
+                  <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
+                </span>
+
                 <span class="chip">📞 <a href="tel:+358415764445">+358 41 576 4445</a></span>
                 <span class="chip">🔗 LinkedIn</span>
                 <span class="chip">English (Fluent)</span>
