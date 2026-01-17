@@ -52,15 +52,17 @@
       justify-content:center;
       height:100%;
     }
+
     .avatar{
       width:150px;
-      aspect-ratio:1/1;
+      height:150px;
       border-radius:14px;
       border:1px solid var(--line);
-      object-fit:cover;
-      background:#eef2ff;
-      display:block;
+      object-fit:contain;        /* 🔥 quan trọng */
+      background:#ffffff;        /* nền trắng */
+      padding:6px;               /* tạo khoảng thở */
     }
+
 
     h1{
       margin:0 0 6px;
