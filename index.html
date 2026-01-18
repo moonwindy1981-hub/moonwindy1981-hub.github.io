@@ -280,6 +280,28 @@
     .item li{margin:5px 0}
     .item .domain{margin-top:2px}
 
+    /* ✅ Justified text for Summary + Experience (to match your screenshot need) */
+    .justified p,
+    .justified li,
+    .justified .sub{
+      text-align:justify;
+      text-justify:inter-word;
+      hyphens:auto;
+      -webkit-hyphens:auto;
+      -ms-hyphens:auto;
+    }
+    /* Keep headings/labels left aligned */
+    .justified h2,
+    .justified .role,
+    .justified .subhead,
+    .justified .domain,
+    .justified .when{
+      text-align:left;
+    }
+    /* Improve spacing for justified blocks */
+    .justified p{margin-bottom:12px}
+    .justified li{margin:7px 0}
+
     @media (max-width:980px){
       main{grid-template-columns:1fr}
       .right{border-left:none;border-top:1px solid var(--line)}
@@ -299,6 +321,12 @@
       .right{background:#fff}
       .item,.item--shade,.item--sub{box-shadow:none}
       a{color:inherit;text-decoration:none}
+      /* Ensure justification also applies to print */
+      .justified p,.justified li,.justified .sub{
+        text-align:justify;
+        text-justify:inter-word;
+        hyphens:auto;
+      }
     }
   </style>
 </head>
@@ -391,7 +419,8 @@
         <!-- LEFT -->
         <div class="left">
 
-          <section class="section">
+          <!-- ✅ Justified Summary -->
+          <section class="section justified">
             <h2>Professional Summary</h2>
             <p>
               Business Analyst – Consulting &amp; Delivery with over 10 years of experience supporting banks and financial institutions
@@ -403,13 +432,14 @@
               discussions, and supporting UAT and go-live readiness in environments where accuracy, compliance, and timing are critical.
             </p>
             <p>
-              Often brought into programs at moments of ambiguity—when requirements are unclear, undefined risks, and decisions must be made
+              Often brought into programs at moments of ambiguity—when requirements are unclear, risks are high, and decisions must be made
               with incomplete information. Recognized for clear communication, structured thinking, and the ability to help organizations
               move forward when business needs, technical constraints, and regulatory requirements collide.
             </p>
           </section>
 
-          <section class="section">
+          <!-- ✅ Justified Experience -->
+          <section class="section justified">
             <h2>Professional Experience</h2>
 
             <div class="item item--shade">
@@ -543,12 +573,10 @@
                 <span class="when">2015</span>
               </div>
               <div class="domain">HR, Payroll &amp; Time Attendance Systems</div>
-
               <div class="subhead">Context</div>
               <p class="sub">
                 Clients required rapid implementation of HR and payroll systems aligned with local operational practices.
               </p>
-
               <ul>
                 <li>Led requirement workshops and configuration discussions to align system setup with business needs.</li>
                 <li>Coordinated implementation activities across client and delivery teams to keep timelines on track.</li>
@@ -562,12 +590,10 @@
                 <span class="when">2008 – 2010</span>
               </div>
               <div class="domain">Securities Trading – Front &amp; Back Office</div>
-
               <div class="subhead">Context</div>
               <p class="sub">
                 Trading platforms required close client engagement during rollout and early production phases.
               </p>
-
               <ul>
                 <li>Engaged with client users to understand trading workflows and daily operational requirements.</li>
                 <li>Conducted system demonstrations and user training for front and back office teams.</li>
