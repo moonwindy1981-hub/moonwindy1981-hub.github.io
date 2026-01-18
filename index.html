@@ -198,6 +198,19 @@
       vertical-align:middle;
     }
 
+    .tools{
+      margin-top:12px;
+      padding-top:10px;
+      border-top:1px dashed var(--line);
+    }
+    .tools h4{
+      margin:0 0 8px;
+      font-size:12px;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      color:var(--accent);
+    }
+
     /* BODY */
     main{
       display:grid;
@@ -346,82 +359,84 @@
     <div class="card">
 
      <!-- HEADER -->
-<header>
-  <div class="header-grid">
-    <div class="avatar-frame">
-      <img src="images/MyPhoto_v3.png" alt="Hanh Nguyen" class="avatar-img"/>
-    </div>
-
-    <div>
-      <h1>Hanh Nguyen</h1>
-      <p class="headline">
-        Business Analyst – Consulting &amp; Delivery<br/>
-        <strong>10+ years experience</strong> · Client-facing · Decision support in regulated environments
-      </p>
-
-      <div class="groups">
-        <!-- CONTACT -->
-        <div class="group">
-          <h3>Contact &amp; Availability</h3>
-          <div class="chips">
-            <span class="chip">📍 Espoo, Finland</span>
-
-            <span class="chip email-chip">
-              <span class="icon">✉️</span>
-              <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
-            </span>
-
-            <span class="chip">📞 <a href="tel:+358415764445">+358 41 576 4445</a></span>
-
-            <span class="chip linkedin-chip">
-              <span class="icon">in</span>
-              <a href="https://www.linkedin.com/in/hanh-nguyen-b80b38a1" target="_blank" rel="noopener">LinkedIn</a>
-            </span>
-
-            <span class="chip">English (Fluent)</span>
-            <span class="chip">Vietnamese (Native)</span>
-            <span class="chip">Finnish (A2)</span>
+      <header>
+        <div class="header-grid">
+          <div class="avatar-frame">
+            <img src="images/MyPhoto_v3.png" alt="Hanh Nguyen" class="avatar-img"/>
           </div>
-
-          <div class="spacer"></div>
-
-          <div class="mini">
-            <span>Retail Banking</span>
-            <span>Consumer Finance</span>
-            <span>Digital Banking</span>
-            <span>Capital Markets</span>
-            <span>Risk &amp; Compliance</span>
-            <span>Enterprise Systems</span>
+      
+          <div>
+            <h1>Hanh Nguyen</h1>
+            <p class="headline">
+              Business Analyst – Consulting &amp; Delivery<br/>
+              <strong>10+ years experience</strong> · Client-facing · Decision support in regulated environments
+            </p>
+      
+            <div class="groups">
+              <!-- CONTACT + DOMAINS + TOOLS (LEFT) -->
+              <div class="group">
+                <h3>Contact &amp; Availability</h3>
+      
+                <div class="chips">
+                  <span class="chip">📍 Espoo, Finland</span>
+      
+                  <span class="chip email-chip">
+                    <span class="icon">✉️</span>
+                    <a href="mailto:moonwindy1981@gmail.com">moonwindy1981@gmail.com</a>
+                  </span>
+      
+                  <span class="chip">📞 <a href="tel:+358415764445">+358 41 576 4445</a></span>
+      
+                  <span class="chip linkedin-chip">
+                    <span class="icon">in</span>
+                    <a href="https://www.linkedin.com/in/hanh-nguyen-b80b38a1" target="_blank" rel="noopener">LinkedIn</a>
+                  </span>
+      
+                  <span class="chip">English (Fluent)</span>
+                  <span class="chip">Vietnamese (Native)</span>
+                  <span class="chip">Finnish (A2)</span>
+                </div>
+      
+                <div class="mini">
+                  <span>Retail Banking</span>
+                  <span>Consumer Finance</span>
+                  <span>Digital Banking</span>
+                  <span>Capital Markets</span>
+                  <span>Risk &amp; Compliance</span>
+                  <span>Enterprise Systems</span>
+                </div>
+      
+                <!-- ✅ Tools moved here to fill the empty space -->
+                <div class="tools">
+                  <h4>Tools &amp; Working Environment</h4>
+                  <div class="chips">
+                    <span class="chip">Jira &amp; Confluence (Delivery &amp; Documentation)</span>
+                    <span class="chip">Slack (Collaboration)</span>
+                    <span class="chip">Balsamiq (Wireframing)</span>
+                    <span class="chip">BPMN (Process Modelling)</span>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- CORE EXPERTISE (RIGHT) -->
+              <div class="group">
+                <h3>Core Expertise</h3>
+                <div class="chips">
+                  <span class="chip">Business analysis &amp; requirements clarification</span>
+                  <span class="chip">Stakeholder communication &amp; expectation management</span>
+                  <span class="chip">Workshop facilitation &amp; structured discussions</span>
+                  <span class="chip">Agile delivery &amp; cross-squad coordination</span>
+                  <span class="chip">UAT planning, execution &amp; business sign-off</span>
+                  <span class="chip">Vendor evaluation &amp; sourcing support</span>
+                  <span class="chip">Presentation, trade-off explanation &amp; decision support</span>
+                </div>
+              </div>
+            </div>
+      
           </div>
         </div>
+      </header>
 
-        <!-- CORE EXPERTISE + TOOLS -->
-        <div class="group">
-          <h3>Core Expertise</h3>
-          <div class="chips">
-            <span class="chip">Business analysis &amp; requirements clarification</span>
-            <span class="chip">Stakeholder communication &amp; expectation management</span>
-            <span class="chip">Workshop facilitation &amp; structured discussions</span>
-            <span class="chip">Agile delivery &amp; cross-squad coordination</span>
-            <span class="chip">UAT planning, execution &amp; business sign-off</span>
-            <span class="chip">Vendor evaluation &amp; sourcing support</span>
-            <span class="chip">Presentation, trade-off explanation &amp; decision support</span>
-          </div>
-
-          <!-- TOOLS -->
-          <div class="mini" style="margin-top:12px;">
-            <span><strong>Tools &amp; Working Environment</strong></span>
-            <span>Jira &amp; Confluence (Delivery &amp; Documentation)</span>
-            <span>Slack (Collaboration)</span>
-            <span>Balsamiq (Wireframing)</span>
-            <span>BPMN (Process Modelling)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</header>
 
       <!-- BODY -->
       <main>
