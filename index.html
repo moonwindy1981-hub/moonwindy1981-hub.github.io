@@ -162,6 +162,25 @@
       line-height:1;
     }
 
+    .mini{
+      margin-top:12px;
+      padding-top:10px;
+      border-top:1px dashed var(--line);
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      font-size:12.5px;
+      color:var(--muted);
+    }
+    
+    .mini span:not(:first-child)::before{
+      content:"·";
+      margin:0 8px;
+      color:#9ca3af;
+      font-size:18px;
+      vertical-align:middle;
+    }
+
     .tools{
       margin-top:12px;
       padding-top:10px;
