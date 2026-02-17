@@ -172,7 +172,7 @@
       font-size:12.5px;
       color:var(--muted);
     }
-    
+    .mini span{white-space:nowrap}
     .mini span:not(:first-child)::before{
       content:"·";
       margin:0 8px;
@@ -220,19 +220,40 @@
     }
 
     p{margin:0 0 10px;font-size:14px}
+
+    /* Lists */
     ul{margin:8px 0 0;padding-left:18px}
     li{margin:6px 0;font-size:14px}
 
+    /* ✅ Fix: prevent year wrapping + keep layout stable */
     .role{
       display:flex;
-      justify-content:space-between;
       align-items:baseline;
-      gap:10px;
+      gap:12px;
       margin:0 0 4px;
+      flex-wrap:nowrap;
     }
-    .role strong{font-size:15px;color:var(--accent)}
-    .when{font-size:12.5px;color:var(--muted)}
+    .role strong{
+      font-size:15px;
+      color:var(--accent);
+      flex:1;
+      min-width:0; /* allow ellipsis to work */
+    }
+    .when{
+      font-size:12.5px;
+      color:var(--muted);
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+
     .sub,.domain{font-size:13px;color:var(--muted);margin:0 0 6px}
+
+    /* Optional: if a title is extremely long, it will ellipsis instead of pushing year to new line */
+    .truncate{
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
 
     /* Items */
     .item{
@@ -257,29 +278,18 @@
       text-transform:uppercase;
       color:var(--accent);
     }
-    .subitems{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      margin-top:8px;
-    }
-    .item--sub{
-      background:#fff;
-      border-color:#e5e7eb;
-      box-shadow:0 6px 14px rgba(17,24,39,.06);
-      border-left:4px solid #e5e7eb;
-      padding-left:12px;
-    }
 
-    /* Justified text blocks */
+    /* ✅ Fix: justify only paragraphs, NOT bullet list (prevents “thưa chữ”) */
     .justified p,
-    .justified li,
     .justified .sub{
       text-align:justify;
       text-justify:inter-word;
       hyphens:auto;
       -webkit-hyphens:auto;
       -ms-hyphens:auto;
+    }
+    .justified li{
+      text-align:left;
     }
     .justified h2,
     .justified .role,
@@ -296,6 +306,8 @@
       .header-grid{grid-template-columns:1fr}
       .avatar-frame{width:120px;height:160px}
       .avatar-img{width:120px;height:160px}
+      .role{flex-wrap:wrap} /* on mobile, allow wrap */
+      .truncate{white-space:normal} /* allow full title on mobile */
     }
 
     @media print{
@@ -305,20 +317,20 @@
       .page{max-width:none;margin:0;padding:0}
       .card{border:none;box-shadow:none;border-radius:0}
       .right{background:#fff}
-      .item,.item--shade,.item--sub{box-shadow:none}
+      .item,.item--shade{box-shadow:none}
       a{color:inherit;text-decoration:none}
-      .justified p,.justified li,.justified .sub{
+      .justified p,.justified .sub{
         text-align:justify;
         text-justify:inter-word;
         hyphens:auto;
       }
+      .justified li{ text-align:left; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Optional PDF link (edit/remove if not needed) -->
   <div class="toolbar">
     <a class="btn" href="#" onclick="window.print();return false;">🖨️ Print / Save as PDF</a>
   </div>
@@ -330,7 +342,6 @@
       <header>
         <div class="header-grid">
           <div class="avatar-frame">
-            <!-- Update image path if you use an avatar -->
             <img src="images/MyPhoto_v3.png" alt="Hanh Nguyen" class="avatar-img"/>
           </div>
 
@@ -342,7 +353,8 @@
             </p>
 
             <div class="groups">
-              <!-- CONTACT + TOOLS -->
+
+              <!-- CONTACT -->
               <div class="group">
                 <h3>Contact</h3>
 
@@ -361,18 +373,20 @@
                   <span class="chip">Finnish (A2)</span>
                 </div>
 
-                <div class="mini" style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;gap:6px;font-size:12.5px;color:var(--muted);">
+                <!-- Domains row -->
+                <div class="mini">
                   <span>Digital Banking</span>
                   <span>Payments</span>
                   <span>Lending</span>
                   <span>Risk &amp; Compliance (Exposure)</span>
                   <span>Capital Markets</span>
                 </div>
-                
+
+                <!-- Tools -->
                 <div class="tools">
                   <h4>Tools</h4>
                   <div class="chips">
-                    <span class="chip">Jira & Confluence (Delivery & Documentation)</span>
+                    <span class="chip">Jira &amp; Confluence (Delivery &amp; Documentation)</span>
                     <span class="chip">Slack (Collaboration)</span>
                     <span class="chip">Balsamiq (Wireframing)</span>
                     <span class="chip">BPMN (Process Modelling)</span>
@@ -386,17 +400,17 @@
                 <div class="chips">
                   <span class="chip">BRD / SRS (Business &amp; System Requirements)</span>
                   <span class="chip">User Stories &amp; Acceptance Criteria</span>
-                  <span class="chip">Payment Transaction Flow &amp; Lifecycle</span>
+                  <span class="chip">Payment Transaction Flow &amp; Lifecycle Analysis</span>
                   <span class="chip">Loan Origination &amp; Lending Systems</span>
-                  <span class="chip">UAT &amp; Test Case Coordination</span>
-                  <span class="chip">Traceability &amp; Change Management</span>
-                  <span class="chip">Agile Delivery (Planning · Grooming · Daily)</span>
-                  <span class="chip">Integration Clarification</span>
-                  <span class="chip">Vendor Evaluation (RFP · POC · Contract)</span>
+                  <span class="chip">UAT Planning, Test Case Preparation &amp; Execution Support</span>
+                  <span class="chip">Requirement Traceability &amp; Change Management</span>
+                  <span class="chip">Agile Delivery (Sprint Planning · Grooming · Daily Stand-up)</span>
+                  <span class="chip">System Integration Clarification</span>
+                  <span class="chip">Vendor Evaluation (RFP · POC · Contract Review)</span>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
         </div>
       </header>
@@ -410,7 +424,7 @@
           <section class="section justified">
             <h2>Professional Summary</h2>
             <p>
-              IT Business Analyst with 10 years of experience delivering banking and financial system initiatives across retail banking,
+              IT Business Analyst with over 10 years of experience delivering banking and financial system initiatives across retail banking,
               digital payments, consumer lending, and capital markets.
             </p>
             <p>
@@ -430,7 +444,7 @@
             <!-- ACB -->
             <div class="item item--shade">
               <div class="role">
-                <strong>Asia Commercial Bank (ACB) — IT Business Analyst</strong>
+                <strong class="truncate">Asia Commercial Bank (ACB) — IT Business Analyst</strong>
                 <span class="when">2020 – 2023</span>
               </div>
               <div class="sub">Ho Chi Minh City, Vietnam</div>
@@ -461,7 +475,7 @@
             <!-- GFT -->
             <div class="item">
               <div class="role">
-                <strong>GFT Technologies — IT Business Analyst (Digital Banking / Payments)</strong>
+                <strong class="truncate">GFT Technologies — IT Business Analyst (Digital Banking / Payments)</strong>
                 <span class="when">2021</span>
               </div>
               <div class="sub">Ho Chi Minh City, Vietnam</div>
@@ -481,7 +495,7 @@
             <!-- FE Credit -->
             <div class="item">
               <div class="role">
-                <strong>FE Credit — IT Business Analyst (PEGA LOS)</strong>
+                <strong class="truncate">FE Credit — IT Business Analyst (PEGA LOS)</strong>
                 <span class="when">2016 – 2018</span>
               </div>
               <div class="sub">HCMC, Vietnam</div>
@@ -502,7 +516,7 @@
             <!-- Home Credit -->
             <div class="item">
               <div class="role">
-                <strong>Home Credit Vietnam — Process Analyst / Product Specialist</strong>
+                <strong class="truncate">Home Credit Vietnam — Process Analyst / Product Specialist</strong>
                 <span class="when">2012 – 2014</span>
               </div>
 
@@ -518,7 +532,7 @@
             <!-- ANZ -->
             <div class="item">
               <div class="role">
-                <strong>ANZ Bank — Product Business Analyst (Wealth &amp; Investment)</strong>
+                <strong class="truncate">ANZ Bank — Product Business Analyst (Wealth &amp; Investment)</strong>
                 <span class="when">2010 – 2012</span>
               </div>
 
@@ -534,7 +548,7 @@
             <!-- Capital Market Solutions -->
             <div class="item">
               <div class="role">
-                <strong>Capital Market Solutions — Support Consultant (Securities Trading Systems)</strong>
+                <strong class="truncate">Capital Market Solutions — Support Consultant (Securities Trading Systems)</strong>
                 <span class="when">2008 – 2009</span>
               </div>
 
